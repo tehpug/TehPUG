@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% load i18n %}
 {% load page_nav %}
+{% load staticfiles %}
 {% get_language_info for LANGUAGE_CODE as lang %}
 <html lang="{{ lang.code }}">
   <head>
@@ -17,18 +18,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <link rel="shortcut icon" href="/statics/favicon.png">
+    <link rel="shortcut icon" href="{% static 'favicon.png' %}">
 
     {% if lang.bidi %}
-    <link href="/statics/bootstrap/bidi/css/bootstrap.rtl.min.css" rel="stylesheet" media="screen">
-    <link rel="stylesheet" href="/statics/css/bidi/style.css">
+    <link href="{% static 'bootstrap/bidi/css/bootstrap.rtl.min.css' %}" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="{% static 'css/bidi/style.css' %}">
     {% else %}
-    <link rel="stylesheet" href="/statics/css/fonts.css">
-    <link rel="stylesheet" href="/statics/css/style.css">
-    <link href="/statics/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
     {% endif %}
-    <link rel="stylesheet" href="/statics/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/statics/css/common.css">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/common.css' %}">
 
     {% block extrahead %}
     {% endblock %}
@@ -39,7 +40,7 @@
       <div class="navbar-inner">
         <div class="container" id="topmenu">
           <div class="row">
-	        <div class="span12">
+            <div class="span12">
               <a class="brand" href="/"><b>{% trans "Karajlug" %}</b></a>
               <ul class="nav">
                 <!--<li><a href="/members/">{% trans "Members" %}</a></li>
@@ -129,9 +130,9 @@
           <a href="/news/feed/" ><i class="icon-rss icon-3x"></i></a>
           <br/><br/><br/>
           <h3>{% trans 'Sponsors' %} :</h3>
-          <a href="http://www.jalborz.ir" class="center"><img src="/statics/images/jalborz.png"></a>
-          <a href="http://www.yellowen.com" class="center"><img src="/statics/images/yellowen.png"></a>
-          <a href="http://www.karanic.com" class="center"><img src="/statics/images/karanic.png"></a>
+          <a href="http://www.jalborz.ir" class="center"><img src="{% static 'images/jalborz.png' %}"></a>
+          <a href="http://www.yellowen.com" class="center"><img src="{% static 'images/yellowen.png' %}"></a>
+          <a href="http://www.karanic.com" class="center"><img src="{% static 'images/karanic.png' %}"></a>
           </div>
         </div>
         <div class="row">
@@ -142,14 +143,14 @@
       </div>
     </footer>
     {% endblock %}
-    <script src="/statics/js/jquery-1.9.1.min.js"></script>
+    <script src="{% static 'js/jquery-1.9.1.min.js' %}"></script>
     {% block tail %}
 
     {% if lang.bidi %}
-    <script src="/statics/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 
     {% else %}
-    <script src="/statics/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
     {% endif %}
 
     <script type="javascript">

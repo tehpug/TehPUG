@@ -16,46 +16,51 @@
 #    with this program; if not, write to the Free Software Foundation, Inc.,
 #    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 # -----------------------------------------------------------------------------
+import imp
 import os
 
-ROOT = os.path.dirname(__file__)
+ON_OPENSHIFT = False
+if 'OPENSHIFT_REPO_DIR' in os.environ:
+    ON_OPENSHIFT = True
 
-DEBUG = True
-
-if os.path.exists(os.path.join (ROOT, "../DEPLOY")):
-    DEBUG = False
-
+PROJECT_DIR = os.path.dirname(os.path.realpath(__file__))
+if ON_OPENSHIFT:
+    DEBUG = bool(os.environ.get('DEBUG', False))
+    if DEBUG:
+        print("WARNING: The DEBUG environment is set to True.")
+else:
+    DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-
-
-if os.path.exists(os.path.join(ROOT, "../deployment")):
-    DEBUG = False
-    TEMPLATE_DEBUG = DEBUG
-
-
 ADMINS = (
-    ('Behnam Ahmad Khan Beigi',
-     'b3hnam@b3hnam.com'),
-    ('lxsameer', 'lxsameer@lxsameer.com'),
+    ('Keyvan Hedayati', 'k1.hedayati93@gmail.com'),
 )
 
 MANAGERS = ADMINS
 
-
-DB_PATH =  os.path.join(
-    os.environ.get("OPENSHIFT_DATA_DIR", ROOT), "db.sqlite3")
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': DB_PATH,
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
+if ON_OPENSHIFT:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(os.environ['OPENSHIFT_DATA_DIR'],
+                                 'sqlite3.db'),
+            'USER': '',
+            'PASSWORD': '',
+            'HOST': '',
+            'PORT': '',
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(PROJECT_DIR, 'sqlite3.db'),
+            'USER': '',
+            'PASSWORD': '',
+            'HOST': '',
+            'PORT': '',
+        }
+    }
 
 try:
     import karajlug_secret as ks
@@ -99,25 +104,26 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = os.path.join(ROOT, '../statics').replace("\\", "/")
+MEDIA_ROOT = os.environ.get('OPENSHIFT_DATA_DIR', '')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = '/statics/'
+MEDIA_URL = '/upload/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = os.path.join(ROOT, "../tmp/static/")
-
+# STATIC_ROOT = os.path.join(os.environ.get('OPENSHIFT_DATA_DIR', ''), 'statics')
+STATIC_ROOT = os.path.join(PROJECT_DIR, '..', 'static')
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
+    os.path.join(PROJECT_DIR, '..', 'statics'),
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -132,7 +138,19 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '*dk=8z3srvu9$3+ewxu*s+lwnir(3%(pot$gp*-z%is^z^p!&amp;l'
+default_keys = {
+    'SECRET_KEY': 'as#jgh[cn]@%^sKHJkh9&*(&987(^%^&65$GJB<Pasdoa[sodqlwllkasd]))'
+}
+
+# Replace default keys with dynamic values if we are in OpenShift
+use_keys = default_keys
+if ON_OPENSHIFT:
+    # imp.find_module('openshiftlibs')
+    import openshiftlibs
+    use_keys = openshiftlibs.openshift_secure(default_keys)
+
+# Make this unique, and don't share it with anybody.
+SECRET_KEY = use_keys['SECRET_KEY']
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -155,10 +173,10 @@ LEAF_URLCONF = 'karajlug_org.urls'
 ROOT_URLCONF = 'multilang.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'karajlug_org.wsgi.application'
+# WSGI_APPLICATION = 'karajlug_org.wsgi.application'
 
 TEMPLATE_DIRS = (
-    os.path.join(ROOT, '../templates').replace("\\", "/"),
+    os.path.join(PROJECT_DIR, '..', 'templates'),
 )
 
 INSTALLED_APPS = (
@@ -226,13 +244,14 @@ AUTH_PROFILE_MODULE = 'members.Member'
 
 APPEND_SLASH = True
 LOCALE_PATHS = (
-    os.path.join(ROOT, "../conf/locale"),
+    os.path.join(PROJECT_DIR, "../conf/locale"),
 )
 
 ALLOWED_HOSTS = (
+    "ex-std-node117.prod.rhcloud.com",
     "127.0.0.1:7020",
-    "www.karajlug.org",
-    "karajlug.org",
+    "www.tehpug.ir",
+    "tehpug.ir",
     "127.0.0.1",
-    "home-karajlug.rhcloud.com",
+    "tehpug-tehpug.rhcloud.com",
 )

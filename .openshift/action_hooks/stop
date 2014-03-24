@@ -1,3 +1,0 @@
-if [ -e $OPENSHIFT_TMP_DIR/uwsgi.pid ]; then
-  kill `cat $OPENSHIFT_TMP_DIR/uwsgi.pid`
-fi
