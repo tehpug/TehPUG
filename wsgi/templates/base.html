@@ -9,12 +9,12 @@
 
     <title>
       {% block title %}
-      {% trans " KarajLug " %}
+      {% trans " TehPUG " %}
       {% endblock %}
     </title>
 
-    <meta name="description" content="KarajLug Karaj Linux users group">
-    <meta name="author" content="Sameer Rahmani - Behnam Ahmad Khan Beigi - Ebrahim Byagowi">
+    <meta name="description" content="TehPUG Tehran Python users group">
+    <meta name="author" content="Sameer Rahmani - Behnam Ahmad Khan Beigi - Ebrahim Byagowi - Keyvan Hedayati">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
@@ -35,23 +35,21 @@
     {% endblock %}
   </head>
   <body dir="{% if lang.bidi %}rtl{% else %}ltr{% endif %}">
-  {% block body %}
-    <div class="navbar navbar-fixed-top">
+    {% block body %}
+    <div class="navbar">
       <div class="navbar-inner">
         <div class="container" id="topmenu">
           <div class="row">
             <div class="span12">
-              <a class="brand" href="/"><b>{% trans "Karajlug" %}</b></a>
+              <a class="brand" href="/"><b>{% trans "TehPUG" %}</b></a>
               <ul class="nav">
                 <!--<li><a href="/members/">{% trans "Members" %}</a></li>
                 <li><a href="/books/">{% trans "Books" %}</a></li>-->
-                <li><a href="https://github.com/Karajlug">{% trans "Projects" %}</a></li>
+                <li><a href="https://github.com/tehpug">{% trans "Projects" %}</a></li>
                 <li><a href="/contact/">{% trans "Contact" %}</a></li>
                 <li><a href="/faq/">{% trans "FAQ" %}</a></li>
-                <li><a href="http://webchat.freenode.net/?channels=5hit&uio=d4" target="_blank">{% trans "WebChat" %}</a></li>
-                <li><a href="https://lists.nongnu.org/mailman/listinfo/karajlug-general">{% trans "Mailing list" %}</a></li>
-                <li><a href="http://events.karajlug.org">{% trans "Events" %}</a></li>
-
+                <li><a href="http://webchat.freenode.net/?channels=python-ir&uio=d4" target="_blank">{% trans "WebChat" %}</a></li>
+                <li><a href="https://mail.python.org/mailman/listinfo/tehpug">{% trans "Mailing list" %}</a></li>
                 <!--<li><a href="/faq/">{% trans "FAQ" %}</a></li>-->
               </ul>
 
@@ -74,76 +72,66 @@
     {% endblock header %}
 
     <div class="container maincontainer">
-    {% block content %}
+      {% block content %}
 
-    {% endblock content %}
+      {% endblock content %}
     </div>
 
     <footer>
       <div class="container">
         <div class="row">
           <div class="span4 vspan4">
-        <div class="center span3">
-        <h3 class="ftitle">{% trans 'Other Lugs' %}:</h3>
-          <ul>
-            <li><a href="http://tehlug.org/">{% trans 'Tehran Lug' %}</a></li>
-            <li><a href="http://www.isfahanlug.org/">{% trans 'Isfahan Lug' %}</a></li>
-            <li><a href="http://www.zanjanlug.org/">{% trans 'Zanjan Lug' %}</a></li>
-            <li><a href="http://www.mashhadlug.org/">{% trans 'Mashhad Lug' %}</a></li>
-            <li><a href="http://www.gullug.org/">{% trans 'Guilan Lug' %}</a></li>
-            <li><a href="http://khuzestanlug.ir/">{% trans 'Khuzestan Lug' %}</a></li>
-            <li><a href="http://tabrix.org">{% trans 'Tabriz Lug' %}</a></li>
-            <li><a href="http://klug.ir">{% trans 'Kerman Lug' %}</a></li>
-            <li><a href="http://www.yazdlug.com/">{% trans 'Yazd Lug' %}</a></li>
-            <li><a href="http://bulug.ir/">{% trans 'Bushehr Lug' %}</a></li>
+            <div class="center span3">
+              <h3 class="ftitle">{% trans 'Other Communities' %}:</h3>
+              <ul class="other">
+                <li><a href="http://tehlug.org/">{% trans 'Tehran Lug' %}</a></li>
+                <li><a href="http://karajlug.org/">{% trans 'Karaj Lug' %}</a></li>
+                <li><a href="http://www.isfahanlug.org/">{% trans 'Isfahan Lug' %}</a></li>
+                <li><a href="http://www.zanjanlug.org/">{% trans 'Zanjan Lug' %}</a></li>
+                <li><a href="http://www.mashhadlug.org/">{% trans 'Mashhad Lug' %}</a></li>
+                <li><a href="http://www.gullug.org/">{% trans 'Guilan Lug' %}</a></li>
+                <li><a href="http://khuzestanlug.ir/">{% trans 'Khuzestan Lug' %}</a></li>
+                <li><a href="http://tabrix.org">{% trans 'Tabriz Lug' %}</a></li>
+                <li><a href="http://klug.ir">{% trans 'Kerman Lug' %}</a></li>
+                <li><a href="http://www.yazdlug.com/">{% trans 'Yazd Lug' %}</a></li>
+                <li><a href="http://bulug.ir/">{% trans 'Bushehr Lug' %}</a></li>
 
 
-          </ul>
-        </div>
+              </ul>
+            </div>
           </div>
           <div class="span4 vspan4">
-        <div class="center span3">
-        <h3 class="ftitle">{% trans 'Useful links' %}:</h3>
-        <ul>
-          <!-- <li><a href="http://fa.wikipedia.org/wiki/%DA%AF%D8%B1%D9%88%D9%87_%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%D8%A7%D9%86_%D9%84%DB%8C%D9%86%D9%88%DA%A9%D8%B3_%DA%A9%D8%B1%D8%AC">{% trans "KarajLug on Wikipedia" %}</a></li> -->
-          {% if lang.bidi %}
-          <li><a href="https://fa.wikipedia.org/wiki/%DA%AF%D8%B1%D9%88%D9%87_%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%D8%A7%D9%86_%D9%84%DB%8C%D9%86%D9%88%DA%A9%D8%B3">{% trans "What is LUG?" %}</a></li>
-          {% else %}
-          <li><a href="http://en.wikipedia.org/wiki/Linux_user_group">{% trans "What is LUG?" %}</a></li>
-          {% endif %}
-
-          <li><a href="http://www.fsf.org/">{% trans 'Free Software Foundation' %}</a></li>
-          <li><a href="http://www.gnu.org/">{% trans 'GNU Project' %}</a></li>
-          <li><a href="http://www.linuxfoundation.org">{% trans 'Linux Foundation' %}</a></li>
-          <li><a href="http://www.linuxmag.ir/">{% trans 'LinuxMag' %}</a></li>
-
-        </ul>
+            <div class="center span3">
+              <h3 class="ftitle">{% trans 'Useful links' %}:</h3>
+              <ul>
+                <!-- <li><a href="http://fa.wikipedia.org/wiki/%DA%AF%D8%B1%D9%88%D9%87_%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%D8%A7%D9%86_%D9%84%DB%8C%D9%86%D9%88%DA%A9%D8%B3_%DA%A9%D8%B1%D8%AC">{% trans "TehPUG on Wikipedia" %}</a></li> -->
+                <li><a href="http://k1-hedayati.github.io/python-the-right-way/">{% trans "Python The Right Way" %}</a></li>
+                <li><a href="http://pysocial.com/">{% trans "PySocial" %}</a></li>
+                <li><a href="http://www.linuxmag.ir/">{% trans 'LinuxMag' %}</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
           <div class="span4 vspan4">
-        <div class="center span4" id="follow">
-          <h3 class="ftitle">{% trans 'Karajlug in' %}:</h3>
-          <a href="https://github.com/Karajlug" ><i class="icon-github icon-3x"></i></a>
-          <a href="https://www.twitter.com/karajlug" ><i class="icon-twitter icon-3x"></i></a>
-          <a href="https://plus.google.com/+KarajlugOrgpage" rel="publisher" ><i class="icon-google-plus icon-3x"></i></a>
-          <a href="http://www.facebook.com/pages/KarajLug/113288182057531" ><i class="icon-facebook-sign icon-3x"></i></a>
-          <a href="/news/feed/" ><i class="icon-rss icon-3x"></i></a>
-          <br/><br/><br/>
-          <h3>{% trans 'Sponsors' %} :</h3>
-          <a href="http://www.jalborz.ir" class="center"><img src="{% static 'images/jalborz.png' %}"></a>
-          <a href="http://www.yellowen.com" class="center"><img src="{% static 'images/yellowen.png' %}"></a>
-          <a href="http://www.karanic.com" class="center"><img src="{% static 'images/karanic.png' %}"></a>
+            <div class="center span4" id="follow">
+              <h3 class="ftitle">{% trans 'TehPUG in' %}:</h3>
+              <a href="https://github.com/tehpug" ><i class="icon-github icon-3x"></i></a>
+              <a href="https://www.twitter.com/TehPUG" ><i class="icon-twitter icon-3x"></i></a>
+              <a href="http://www.facebook.com/tehpug" ><i class="icon-facebook-sign icon-3x"></i></a>
+              <a href="/news/feed/" ><i class="icon-rss icon-3x"></i></a>
+              <br/><br/><br/>
+              <!-- <h3>{% trans 'Sponsors' %} :</h3> -->
+            </div>
+          </div>
+          <div class="row">
+            <div class="span12">
+              <p align="center"  class="small">©{% trans "Copyright 2013-2014 TehPUG Community" %}.</p>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="span12">
-        <p align="center"  class="small">©{% trans "Copyright 2010-2013 Karajlug Community" %}.</p>
-          </div>
-        </div>
-      </div>
     </footer>
     {% endblock %}
     <script src="{% static 'js/jquery-1.9.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery.slides.min.js' %}"></script>
     {% block tail %}
 
     {% if lang.bidi %}
@@ -153,13 +141,10 @@
     <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
     {% endif %}
 
-    <script type="javascript">
-    $(function(){
-      $('.carousel').carousel();
-    });
-    </script>
     {% endblock tail %}
     {% block analytic %}
     {% endblock analytic %}
+    {% block pagejs %}
+    {% endblock pagejs %}
   </body>
 </html>

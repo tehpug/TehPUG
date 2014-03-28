@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-14 17:06+0330\n"
+"POT-Creation-Date: 2014-03-29 20:38+0430\n"
 "PO-Revision-Date: 2013-12-09 23:05+0430\n"
 "Last-Translator: Behnam Ahmad Khan Beigi <b3hnam@gnu.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -94,7 +94,7 @@ msgstr "خالق هنر"
 msgid "Book"
 msgstr "کتاب"
 
-#: books/models.py:118 templates/base.html:46
+#: books/models.py:118 templates/base.html:47
 msgid "Books"
 msgstr "کتاب‌ها"
 
@@ -146,16 +146,16 @@ msgstr "جواب"
 msgid "Date and Time"
 msgstr "تاریخ و زمان"
 
-#: faq/models.py:47 templates/base.html:49 templates/base.html.py:54
+#: faq/models.py:47 templates/base.html:50 templates/base.html.py:53
 #: templates/faq.html:6
 msgid "FAQ"
 msgstr "سؤال‌های متداول"
 
-#: karajlug_org/settings.py:83 templates/base.html:62
+#: karajlug_org/settings.py:88 templates/base.html:61
 msgid "Persian"
 msgstr "فارسی"
 
-#: karajlug_org/settings.py:84 templates/base.html:60
+#: karajlug_org/settings.py:89 templates/base.html:59
 msgid "English"
 msgstr "انگلیسی"
 
@@ -200,7 +200,7 @@ msgstr "این فیلد احمیتی ندارد"
 msgid "Member"
 msgstr "عضو"
 
-#: members/models.py:108 templates/base.html:45
+#: members/models.py:108 templates/base.html:46
 msgid "Members"
 msgstr "اعضا"
 
@@ -265,16 +265,16 @@ msgstr "از"
 msgid "next"
 msgstr "بعدی"
 
-#: news/templates/news_view.html:7 templates/base.html:11
-msgid " KarajLug "
-msgstr " کرج‌لاگ "
+#: news/templates/news_view.html:7 templates/base.html:12
+msgid " TehPUG "
+msgstr " پاگ تهران "
 
-#: news/templates/news_view.html:19 templates/index.html:188
+#: news/templates/news_view.html:19 templates/index.html:103
 #: templates/page.html:12
 msgid "On"
 msgstr "در"
 
-#: news/templates/news_view.html:19 templates/index.html:188
+#: news/templates/news_view.html:19 templates/index.html:103
 #: templates/page.html:12
 msgid "by"
 msgstr "توسط"
@@ -303,9 +303,9 @@ msgstr "صفحات اول"
 msgid "First Page"
 msgstr "صفحهٔ اول"
 
-#: page/views.py:41 templates/base.html:43
-msgid "Karajlug"
-msgstr "کرج‌لاگ"
+#: page/views.py:41 templates/base.html:44
+msgid "TehPUG"
+msgstr "پاگ تهران"
 
 #: projects/models.py:46
 msgid "Project Name"
@@ -329,18 +329,19 @@ msgid "Projects will appear in menu respect to this value"
 msgstr "نمایش پروژه بر اساس این مقدار در منو نمایش داده می‌شود"
 
 #: projects/models.py:84
-msgid "KarajLUG Project"
-msgstr "پروژه‌های کرج‌لاگ"
+#, fuzzy
+msgid "TehPUG Project"
+msgstr "پروژه‌ پاگ تهران"
 
 #: projects/models.py:120 projects/models.py:129
 msgid "Project"
 msgstr "پروژه"
 
-#: projects/models.py:121 templates/base.html:47
+#: projects/models.py:121 templates/base.html:48
 msgid "Projects"
 msgstr "پروژه‌ها"
 
-#: projects/models.py:131 templates/index.html:137
+#: projects/models.py:131 templates/index.html:54
 msgid "Address"
 msgstr "نشانی"
 
@@ -363,8 +364,9 @@ msgstr "نگه‌دار"
 
 #: projects/templates/project_view.html:24 projects/templates/projects.html:24
 #: projects/templates/projects.html:44
-msgid "A KarajLUG project"
-msgstr "یک پروژه از کرج‌لاگ"
+#, fuzzy
+msgid "A TehPUG project"
+msgstr "پروژه‌ پاگ تهران"
 
 #: projects/templates/project_view.html:26 projects/templates/projects.html:26
 #: projects/templates/projects.html:46
@@ -395,29 +397,29 @@ msgstr "خطای داخلی سرور"
 msgid "Please Report this to development team."
 msgstr "لطفاً این را به تیم توسعه گزارش دهید."
 
-#: templates/base.html:48
+#: templates/base.html:49
 msgid "Contact"
 msgstr "ارتباط با ما"
 
-#: templates/base.html:50
+#: templates/base.html:51
 msgid "WebChat"
 msgstr "چت آنلاین"
 
-#: templates/base.html:51
+#: templates/base.html:52
 msgid "Mailing list"
 msgstr "لیست پستی"
 
-#: templates/base.html:52
-msgid "Events"
-msgstr "رویدادها"
+#: templates/base.html:85
+msgid "Other Communities"
+msgstr "گروه‌های دیگر"
 
-#: templates/base.html:86
-msgid "Other Lugs"
-msgstr "لاگ‌های دیگر"
-
-#: templates/base.html:88
+#: templates/base.html:87
 msgid "Tehran Lug"
 msgstr "تهران‌لاگ"
+
+#: templates/base.html:88
+msgid "Karaj Lug"
+msgstr "کرج لاگ"
 
 #: templates/base.html:89
 msgid "Isfahan Lug"
@@ -460,44 +462,38 @@ msgid "Useful links"
 msgstr "پیوندهای مفید"
 
 #: templates/base.html:107
-msgid "KarajLug on Wikipedia"
-msgstr "کرج‌لاگ در ویکیپدیا"
+#, fuzzy
+msgid "TehPUG on Wikipedia"
+msgstr "پاگ تهران در ویکیپدیا"
 
-#: templates/base.html:109 templates/base.html.py:111
-msgid "What is LUG?"
-msgstr "لاگ چیست؟"
+#: templates/base.html:108
+msgid "Python The Right Way"
+msgstr "Python The Right Way"
 
-#: templates/base.html:114
-msgid "Free Software Foundation"
-msgstr "بنیاد نرم‌افزار‌های آزاد"
+#: templates/base.html:109
+msgid "PySocial"
+msgstr "اجتماع پایتونی‌ها"
 
-#: templates/base.html:115
-msgid "GNU Project"
-msgstr "پروژه گنو"
-
-#: templates/base.html:116
-msgid "Linux Foundation"
-msgstr "بنیاد لینوکس"
-
-#: templates/base.html:117
+#: templates/base.html:110
 msgid "LinuxMag"
 msgstr "مجله لینوکس‌مگ"
 
-#: templates/base.html:124
-msgid "Karajlug in"
-msgstr "کرج‌لاگ در"
+#: templates/base.html:116
+msgid "TehPUG in"
+msgstr "پاگ تهران در"
 
-#: templates/base.html:131
+#: templates/base.html:122
 msgid "Sponsors"
 msgstr "حامیان"
 
-#: templates/base.html:139
-msgid "Copyright 2010-2013 Karajlug Community"
-msgstr "کپی‌رایت ۲۰۱۰-۲۰۱۳ اجتماع کرج‌لاگ"
+#: templates/base.html:127
+#, fuzzy
+msgid "Copyright 2013-2014 TehPUG Community"
+msgstr "کپی‌رایت ۲۰۱۳−۲۰۱۴ اجتماع پاگ تهران"
 
 #: templates/contact.html:10
-msgid "Stay in touch with Karajlug"
-msgstr "با کرج‌لاگ در تماس باشید"
+msgid "Stay in touch with TehPUG"
+msgstr "با پاگ تهران در تماس باشید"
 
 #: templates/contact.html:13
 msgid "IRC"
@@ -515,93 +511,120 @@ msgstr "کانال"
 msgid "Mailing List"
 msgstr "میلینگ لیست"
 
-#: templates/index.html:22
-msgid "SFD 2011"
-msgstr "روز آزادی نرم‌افزار ۲۰۱۱"
+#: templates/index.html:24
+msgid "Tehran Python User Group"
+msgstr "گروه کاربران پایتون تهران"
 
-#: templates/index.html:25
+#: templates/index.html:57
 msgid ""
-"Karajlugers celeberate Software freedom day along side with the world for "
-"the second year in 2011"
+"Tehran, Africa St, Nor St (Africa to the north after the Zafar, before the "
+"gas station) - No. 18, Tosan Co. training hall"
 msgstr ""
-"کرج‌لاگی‌ها جشن روز آزادی نرم‌افزار را برای دومین بار در سال ۲۰۱۱ به‌همراه سایر "
-"جهانیان جشن گرفتند."
+"تهران، خیابان آفریقا - کوچه نور (آفریقا به سمت شمال بعد از ظفر، قبل از پمپ "
+"بنزین) - پلاک ۱۸، سالن آموزش شرکت توسن"
 
-#: templates/index.html:62
-msgid "Karaj Linux User Group"
-msgstr "گروه کاربران لینوکس کرج"
-
-#: templates/index.html:65
-msgid ""
-"Karaj Linux User Group is a community that is active on GNU/Linux and Free "
-"Software fields."
-msgstr ""
-"کرج‌لاگ یا گروه کاربران لینوکس کرج اجتماعی است که در زمینهٔ گنو/لینوکس و "
-"نرم‌افزارهای آزاد فعال است. "
-
-#: templates/index.html:76
-msgid "Full Name"
-msgstr "نام کامل"
-
-#: templates/index.html:82
-msgid "Email"
-msgstr "رایانامه"
-
-#: templates/index.html:90
-msgid "Password"
-msgstr "گذرواژه"
-
-#: templates/index.html:98
-msgid "Confirm password"
-msgstr "تأیید گذرواژه"
-
-#: templates/index.html:103
-msgid "Join"
-msgstr "پیوستن"
-
-#: templates/index.html:140
-msgid ""
-"6th unit, 3th floor, Parvaz Complex (Above the MaadIran shop), Motahari st, "
-"Azadegan bridge, Karaj."
-msgstr ""
-"کرج، پل آزادگان، خیابان مطهری، مجتمع پرواز (طبقه فوقانی مادایران)، طبقهٔ سوم، "
-"واحد ۶ "
-
-#: templates/index.html:144
+#: templates/index.html:61
 msgid "More Information"
 msgstr "اطلاعات بیشتر"
 
-#: templates/index.html:147
-msgid "Sameer Rahmani"
-msgstr "سمیر رحمانی"
+#: templates/index.html:64
+msgid "Keyvan Hedayati"
+msgstr "کیوان هدایتی"
 
-#: templates/index.html:147
-msgid "+98-935-8180918"
-msgstr "۰۹۳۵۸۱۸۰۹۱۸"
+#: templates/index.html:64
+msgid "+98-936-8347120"
+msgstr "۰۹۳۶۸۳۴۷۱۲۰"
 
-#: templates/index.html:148
-msgid "Behnam Khan Beigi"
-msgstr "بهنام خان‌بیگی"
-
-#: templates/index.html:148
-msgid "+98-936-6452290"
-msgstr "۰۹۳۶۶۴۵۲۲۹۰"
-
-#: templates/index.html:153 templates/index.html.py:159
+#: templates/index.html:69 templates/index.html.py:74
 msgid "View"
 msgstr "دیدن"
 
-#: templates/index.html:153 templates/index.html.py:161
-msgid "Parvaz Complex"
-msgstr "متجمع پرواز"
+#: templates/index.html:69 templates/index.html.py:76
+msgid "Tosan Co."
+msgstr "شرکت توسن"
 
-#: templates/index.html:153 templates/index.html.py:163
+#: templates/index.html:69 templates/index.html.py:78
 msgid "in a larger map"
 msgstr "در یک نقشهٔ بزرگ"
 
 #: templates/social_links.html:4
 msgid "Share it"
 msgstr "به اشتراک بگذارید"
+
+#, fuzzy
+#~ msgid "A KarajLUG project"
+#~ msgstr "یک پروژه از پاگ تهران"
+
+#, fuzzy
+#~ msgid "KarajLUG Project"
+#~ msgstr "پروژه‌های پاگ تهران"
+
+#, fuzzy
+#~ msgid "Karajlug"
+#~ msgstr "کرج لاگ"
+
+#, fuzzy
+#~ msgid " KarajLug "
+#~ msgstr "کرج لاگ"
+
+#~ msgid "Events"
+#~ msgstr "رویدادها"
+
+#~ msgid "Other Lugs"
+#~ msgstr "لاگ‌های دیگر"
+
+#~ msgid "What is LUG?"
+#~ msgstr "لاگ چیست؟"
+
+#~ msgid "Free Software Foundation"
+#~ msgstr "بنیاد نرم‌افزار‌های آزاد"
+
+#~ msgid "Linux Foundation"
+#~ msgstr "بنیاد لینوکس"
+
+#~ msgid "SFD 2011"
+#~ msgstr "روز آزادی نرم‌افزار ۲۰۱۱"
+
+#~ msgid ""
+#~ "Karajlugers celeberate Software freedom day along side with the world for "
+#~ "the second year in 2011"
+#~ msgstr ""
+#~ "کرج‌لاگی‌ها جشن روز آزادی نرم‌افزار را برای دومین بار در سال ۲۰۱۱ به‌همراه "
+#~ "سایر جهانیان جشن گرفتند."
+
+#~ msgid ""
+#~ "Karaj Linux User Group is a community that is active on GNU/Linux and "
+#~ "Free Software fields."
+#~ msgstr ""
+#~ "کرج‌لاگ یا گروه کاربران لینوکس کرج اجتماعی است که در زمینهٔ گنو/لینوکس و "
+#~ "نرم‌افزارهای آزاد فعال است. "
+
+#~ msgid "Full Name"
+#~ msgstr "نام کامل"
+
+#~ msgid "Email"
+#~ msgstr "رایانامه"
+
+#~ msgid "Password"
+#~ msgstr "گذرواژه"
+
+#~ msgid "Confirm password"
+#~ msgstr "تأیید گذرواژه"
+
+#~ msgid "Join"
+#~ msgstr "پیوستن"
+
+#~ msgid "Sameer Rahmani"
+#~ msgstr "سمیر رحمانی"
+
+#~ msgid "+98-935-8180918"
+#~ msgstr "۰۹۳۵۸۱۸۰۹۱۸"
+
+#~ msgid "Behnam Khan Beigi"
+#~ msgstr "بهنام خان‌بیگی"
+
+#~ msgid "+98-936-6452290"
+#~ msgstr "۰۹۳۶۶۴۵۲۲۹۰"
 
 #~ msgid "Follow"
 #~ msgstr "دنبال‌کردن"

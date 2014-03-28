@@ -3,52 +3,13 @@
 {% load appfilters %}
 {% load staticfiles %}
 {% block header %}
-<div class="header"></div>
-
-<div class="container-flude">
+<div class="header">
   <div class="container">
     <div class="row">
-      <div id="Carousel" class="carousel slide span12">
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="active item">
-            <img src="{% static 'images/karajlug.jpg' %}" >
-            <div class="carousel-caption">
-              <h4>
-                {% trans "SFD 2011" %}
-              </h4>
-              <p>
-                {% trans "Karajlugers celeberate Software freedom day along side with the world for the second year in 2011" %}
-              </p>
-            </div>
-          </div>
-
-          <div class="item">
-            <img src="{% static 'images/3.jpg' %}" >
-            <div class="carousel-caption">
-              <h4>
-              </h4>
-              <p>
-              </p>
-            </div>
-          </div>
-          <div class="item">
-            <img src="{% static 'images/3.jpg' %}" >
-            <div class="carousel-caption">
-              <h4>
-              </h4>
-              <p>
-              </p>
-            </div>
-          </div>
-
-        </div>
-        <a class="carousel-control left" id="carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-        <a class="carousel-control right" href="#myCarousel" id="carousel-control" data-slide="next">&rsaquo;</a>
+      <div id="slides">
+        <img src="{% static 'img/slide-1.jpg' %}"/>
+        <img src="{% static 'img/slide-2.jpg' %}"/>
+        <img src="{% static 'img/slide-3.jpg' %}"/>
       </div>
     </div>
   </div>
@@ -57,59 +18,15 @@
 <div class="secbanner">
   <div class="container">
     <div class="row">
-      <div class="span9" id="sitetitle">
-        <h1>
-          {% trans "Karaj Linux User Group" %}
-        </h1>
-        <p>
-          {% trans "Karaj Linux User Group is a community that is active on GNU/Linux and Free Software fields." %}
-        </p>
-      </div>
-      <div class="span3" id="mlform">
-        <!--
-        <form class="form-horizontal" action="https://lists.nongnu.org/mailman/subscribe/karajlug-general" method="POST">
-          <div class="controls" id="firstcontrols">
-            <div class="input-prepend ">
-              <span class="add-on">
-                <i class="icon-user"></i>
-              </span>
-              <input class="span2" id="prependedInput" name="fullname" type="text" placeholder="{% trans 'Full Name' %}">
-            </div>
-          </div>
-          <div class="controls">
-            <div class="input-prepend">
-              <span class="add-on">@</span>
-              <input class="span2" id="prependedInput" name="email" type="email" placeholder="{% trans 'Email' %}">
-            </div>
-          </div>
-          <div class="controls">
-            <div class="input-prepend">
-              <span class="add-on">
-                <i class="icon-asterisk"></i>
-              </span>
-              <input class="span2" id="prependedInput" name="pw" type="password" placeholder="{% trans 'Password' %}">
-            </div>
-          </div>
-          <div class="controls">
-            <div class="input-prepend">
-              <span class="add-on">
-                <i class="icon-asterisk"></i>
-              </span>
-              <input class="span2" id="prependedInput" name="pw-conf" type="password" placeholder="{% trans 'Confirm password' %}">
-            </div>
-          </div>
-          <input type="radio" checked="" style="display: none;" value="0" name="digest">
-          <div class="controls">
-            <a href="https://lists.nongnu.org/mailman/listinfo/karajlug-general" class="btn btn-success">{% trans "Join" %}</a>
-
-          </div>
-        </form>
-!-->
+      <div id="sitetitle">
+    <h1>
+      <img src="{% static 'img/logo.png' %}" />
+      {% trans "Tehran Python User Group" %}
+    </h1>
       </div>
     </div>
   </div>
 </div>
-
 {% endblock header %}
 
 {% block content %}
@@ -130,41 +47,36 @@
 </div>
 
 <div class="address">
-  <div class="container">
-    <div class="row">
-      <div class="span6">
-        <h2>
-          <i class="icon-map-marker icon-large"></i> {% trans "Address" %}
-        </h2>
-        <p>
-          {% trans "6th unit, 3th floor, Parvaz Complex (Above the MaadIran shop), Motahari st, Azadegan bridge, Karaj." %}
-        </p>
-        <br />
-        <p>
-          {% trans "More Information" %}:
-        </p>
-        <p class="left pull-{% if lang.bidi %}left{% else %}right{% endif %}">
-          {% trans "Sameer Rahmani" %} : {% trans "+98-935-8180918" %}<br/>
-          {% trans "Behnam Khan Beigi" %} : {% trans "+98-936-6452290" %}
-        </p>
-      </div>
-      <div class="span6">
-        <div class="pull-{% if lang.bidi %}left{% else %}right{% endif %}" id="map">
-          <a href="http://goo.gl/maps/EnYEY"  title="{% trans "View" %} {% trans "Parvaz Complex" %} {% trans "in a larger map" %}">
-            <!-- Image source: http://maps.googleapis.com/maps/api/staticmap?maptype=hybrid&center=35.833065,50.996616&zoom=16&size=400x300&markers=35.835065,50.993616&sensor=false -->
-            <img src="{% static 'images/staticmap.png' %}" alt="KarajLug on map" />
-          </a>
-          <br />
-          <small>
-            {% trans "View" %}
-            <a href="http://goo.gl/maps/EnYEY">
-              {% trans "Parvaz Complex" %}
-            </a>
-            {% trans "in a larger map" %}
-          </small>
-        </div>
-      </div>
+  <div>
+    <div class="addrtext">
+      <h2>
+        <i class="icon-map-marker icon-large"></i> {% trans "Address" %}
+      </h2>
+      <p>
+        {% trans "Tehran, Africa St, Nor St (Africa to the north after the Zafar, before the gas station) - No. 18, Tosan Co. training hall" %}
+      </p>
+      <br />
+      <p>
+        {% trans "More Information" %}:
+      </p>
+      <p class="left pull-{% if lang.bidi %}left{% else %}right{% endif %}">
+        {% trans "Keyvan Hedayati" %} : {% trans "+98-936-8347120" %}<br/>
+      </p>
     </div>
+    <div class="pull-{% if lang.bidi %}left{% else %}right{% endif %}" id="map">
+      <a href="http://goo.gl/V1Qoz0" target="_blank" title="{% trans "View" %} {% trans "Tosan Co." %} {% trans "in a larger map" %}">
+        <img src="{% static 'img/staticmap.jpg' %}" class="img-rounded" alt="TehPUG on map" />
+      </a>
+      <br />
+      <small>
+        {% trans "View" %}
+        <a href="http://goo.gl/V1Qoz0">
+          {% trans "Tosan Co." %}
+        </a>
+        {% trans "in a larger map" %}
+      </small>
+    </div>
+    <div class="clearfix"></div>
   </div>
 </div>
 
@@ -198,25 +110,35 @@
 
 
 {% block analytic %}
-<!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-var sc_project=9589547;
-var sc_invisible=1;
-var sc_security="b4fd1047";
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="web statistics"
-href="http://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="http://c.statcounter.com/9589547/0/b4fd1047/1/"
-alt="web statistics"></a></div></noscript>
-<!-- End of StatCounter Code for Default Guide -->
 {% endblock analytic %}
 
-  <script type="text/javascript">
-    $('.carousel').carousel();
-  </script>
+{% block pagejs %}
+<script type="text/javascript">
+$(function() {
+    $('#slides').slidesjs({
+    height: 450,
+    play: {
+        active: true,
+        auto: true,
+        interval: 6000,
+        swap: true,
+        effect: "fade"
+    },
+    navigation: {
+        active: true,
+        effect: "fade"
+    },
+    pagination: {
+        active: true,
+        effect: "fade"
+    },
+    effect: {
+        fade: {
+        speed: 1000,
+        crossfade: true
+        }
+    }
+    });
+});
+</script>
+{% endblock pagejs %}

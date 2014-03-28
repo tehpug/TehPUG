@@ -11,7 +11,7 @@ b, i,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
+article, aside, canvas, details, figcaption, figure,
 fheader, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
   margin:0;
@@ -21,9 +21,9 @@ time, mark, audio, video {
   font-size:100%;
   vertical-align:baseline;
   background:transparent;
-}                  
+}
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section { 
+footer, header, hgroup, menu, nav, section {
     display:block;
 }
 nav ul { list-style:none; }
@@ -39,7 +39,7 @@ table { border-collapse:collapse; border-spacing:0; }
 hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
 input, select { vertical-align:middle; }
 
-/* End of Reset CSS 
+/* End of Reset CSS
 
 fonts.css from the YUI Library: developer.yahoo.com/yui/ */
 
@@ -48,13 +48,13 @@ select, input, textarea, button { font:99% sans-serif; }
 pre, code, kbd, samp { font-family: monospace, sans-serif; }
 
 
-/* 
- * HTML5 Boilerplate - minimal base styles 
+/*
+ * HTML5 Boilerplate - minimal base styles
  */
 
-body, select, input, textarea { 
-  color: #444; 
-  /* font-family: Georgia, serif;  */   
+body, select, input, textarea {
+  color: #444;
+  /* font-family: Georgia, serif;  */
 }
 h1,h2,h3,h4,h5,h6 { font-weight: bold; }
 html { overflow-y: scroll; }
@@ -63,14 +63,14 @@ a, a:active, a:visited { color: #eeeeec; }
 a:hover { color: #ff3333; }
 ul, ol { margin-right: 1.8em; }
 ol { list-style-type: decimal; }
-nav ul, nav li { margin: 0; } 
+nav ul, nav li { margin: 0; }
 small { font-size: 85%; }
 strong, th { font-weight: bold; }
-td, td img { vertical-align: top; } 
+td, td img { vertical-align: top; }
 sub { vertical-align: sub; font-size: smaller; }
 sup { vertical-align: super; font-size: smaller; }
-pre { 
-  padding: 15px; 
+pre {
+  padding: 15px;
   white-space: pre; /* CSS2 */
   white-space: pre-wrap; /* CSS 2.1 */
   white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
@@ -85,35 +85,35 @@ input[type="checkbox"] { vertical-align: bottom; }
 label, input[type=button], input[type=submit], button { cursor: pointer; }
 button, input, select, textarea { margin: 0; }
 input:valid, textarea:valid   {  }
-input:invalid, textarea:invalid { 
+input:invalid, textarea:invalid {
       border-radius: 1px;
-    -moz-box-shadow: 0px 0px 5px red; 
- -webkit-box-shadow: 0px 0px 5px red; 
-         box-shadow: 0px 0px 5px red;
+    -moz-box-shadow: 0px 0px 5px red;
+ -webkit-box-shadow: 0px 0px 5px red;
+	 box-shadow: 0px 0px 5px red;
 }
-.no-boxshadow input:invalid, 
+.no-boxshadow input:invalid,
 .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 
 /* By default the selection color is pink */
 ::-moz-selection{ background: #f16529; color:#fff; text-shadow: none; }
-::selection { background:#f16529; color:#fff; text-shadow: none; } 
-a:link { -webkit-tap-highlight-color: #FF5E99; } 
+::selection { background:#f16529; color:#fff; text-shadow: none; }
+a:link { -webkit-tap-highlight-color: #FF5E99; }
 button {  width: auto; overflow: visible; }
 .ie7 img { -ms-interpolation-mode: bicubic; }
 
 
-/* 
- * Non-semantic helper classes 
+/*
+ * Non-semantic helper classes
  */
 
 /* for image replacement */
 .ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: right; direction: ltr; }
 
 /* Hide for both screenreaders and browsers */
-.hidden { display: none; visibility: hidden; } 
+.hidden { display: none; visibility: hidden; }
 
 /* Hide only visually, but have it available for screenreaders */
-.visuallyhidden { position: absolute !important;    
+.visuallyhidden { position: absolute !important;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px); }
 
@@ -122,8 +122,8 @@ button {  width: auto; overflow: visible; }
 
 /* Clearfix */
 .clearfix:before, .clearfix:after {
-  content: "\0020"; display: block; height: 0; visibility: hidden;	
-} 
+  content: "\0020"; display: block; height: 0; visibility: hidden;
+}
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
 body{
@@ -142,7 +142,7 @@ body{
 	margin-bottom:50px;
 	-webkit-box-shadow:0 0 40px #AAA;
 	   -moz-box-shadow:0 0 40px #AAA;
-	        box-shadow:0 0 40px #AAA;
+		box-shadow:0 0 40px #AAA;
 }
 
 h2, h3{
@@ -151,11 +151,11 @@ h2, h3{
 }
 
 #title, h2, h3{
-	font-weight:normal;	
+	font-weight:normal;
 }
 
 #title{
-    Background: url("/statics/images/logo.png") no-repeat scroll 0 0 transparent;
+    Background: url("/static/img/logo.png") no-repeat scroll 0 0 transparent;
     font-size: 80px;
     color:white;
     padding-top:35px;
@@ -201,7 +201,7 @@ aside{
 	margin-bottom:50px;
 	-webkit-box-shadow:0 -10px 40px 0px #AAA;
 	   -moz-box-shadow:0 -10px 40px 0px #AAA;
-	        box-shadow:0 -10px 40px 0px #AAA;	
+		box-shadow:0 -10px 40px 0px #AAA;
 }
 
 #main p{
@@ -226,7 +226,7 @@ article header{
 	width:700px;
 	-webkit-box-shadow:0 -60px 60px 45px #AAA;
 	   -moz-box-shadow:0 -60px 60px 45px #AAA;
-	        box-shadow:0 -60px 60px 45px #AAA;
+		box-shadow:0 -60px 60px 45px #AAA;
 }
 #news{
     min-height: 400px;
@@ -243,7 +243,7 @@ article header{
 	margin-bottom:50px;
 	-webkit-box-shadow:0px -10px 20px 15px #AAA;
 	   -moz-box-shadow:0px -10px 20px 15px #AAA;
-	        box-shadow:0px -10px 20px 15px #AAA;
+		box-shadow:0px -10px 20px 15px #AAA;
 	background-color:#bbb;
 	border-bottom:20px solid #aaa;
 	float:right;
@@ -251,7 +251,7 @@ article header{
 }
 
 #builder a.selected{
-	
+
 	background-color:#f16529;
 	border-bottom:20px solid #e44d26;
 }
@@ -281,8 +281,8 @@ article header{
 	width:660px;
 	-webkit-box-shadow:0 -60px 60px 45px #AAA;
 	   -moz-box-shadow:0 -60px 60px 45px #AAA;
-	        box-shadow:0 -60px 60px 45px #AAA;
-	        padding-bottom:0px;
+		box-shadow:0 -60px 60px 45px #AAA;
+		padding-bottom:0px;
 }
 
 
@@ -293,7 +293,7 @@ article header{
 	margin-top:50px;
 	-webkit-box-shadow:0 0 40px #AAA;
 	   -moz-box-shadow:0 0 40px #AAA;
-	        box-shadow:0 0 40px #AAA;
+		box-shadow:0 0 40px #AAA;
 }
 
 #footer-container footer{
@@ -329,26 +329,26 @@ article header{
 }
 
 
-@media all and (orientation:portrait) { 
-  
+@media all and (orientation:portrait) {
+
 }
 
-@media all and (orientation:landscape) { 
-  
+@media all and (orientation:landscape) {
+
 }
 
 @media screen and (max-device-width: 480px) {
-  
+
 }
 
 @media print {
   * { background: transparent !important; color: #444 !important; text-shadow: none !important; }
   a, a:visited { color: #444 !important; text-decoration: underline; }
-  a:after { content: " (" attr(href) ")"; } 
+  a:after { content: " (" attr(href) ")"; }
   abbr:after { content: " (" attr(title) ")"; }
   .ir a:after { content: ""; }  /* Don't show links for images */
   pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */ 
+  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
   tr, img { page-break-inside: avoid; }
   @page { margin: 0.5cm; }
   p, h2, h3 { orphans: 3; widows: 3; }
@@ -380,7 +380,7 @@ article header{
 }
 #powered {
     display: block;
-    background: url("/statics/images/pow.png") no-repeat scroll 0 0 transparent;
+    background: url("/static/img/pow.png") no-repeat scroll 0 0 transparent;
     height: 75px;
     margin-right: 80%;
     text-indent: -9999px;
@@ -400,12 +400,12 @@ article header{
     float:right;
     margin-right: 70%;
     padding-top: 10px;
-    padding-bottom: 30px;    
+    padding-bottom: 30px;
 }
 .pub {
     margin-top: 25px;
     font-size: 12px;
-    font: 12px/18px Helvetica,Helvetica Neue,Arial;   
+    font: 12px/18px Helvetica,Helvetica Neue,Arial;
 }
 .mtable {
     width: 100%;
@@ -424,7 +424,7 @@ article header{
     height: 75px;
     margin-left: 20px;
     margin-bottom: 25px;
-    
+
 }
 .email{
     color: #666665;

@@ -81,7 +81,7 @@ class Project(models.Model):
         help_text=_("Projects will appear in menu respect to this value"))
 
     kproject = models.BooleanField(default=False,
-                                   verbose_name=_("KarajLUG Project"))
+                                   verbose_name=_("TehPUG Project"))
     desc = models.TextField(verbose_name=_("Description"),
                             blank=True, null=True)
 
@@ -93,7 +93,7 @@ class Project(models.Model):
 
     def full_path(self):
         from django.conf import settings
-        site = getattr(settings, "URL", "www.karajlug.org")
+        site = getattr(settings, "URL", "tehpug.ir")
         return "%s%s" % (site, self.get_absolute_url())
 
     def irc_repr(self, logentry):

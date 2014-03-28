@@ -1,48 +1,44 @@
 @font-face {
-  font-family: 'Droid Arabic Naskh';
-  src: url('/statics/font/DroidNaskh-Regular.ttf') format('truetype'); /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+   font-family: 'Droid Arabic Naskh';
+   src: url('/static/font/DroidNaskh-Regular.ttf') format('truetype'); /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
 }
 
 
 * {
-    font-family: 'Droid Arabic Naskh', serif;
+   font-family: 'Droid Arabic Naskh', serif;
 }
 body {
-    direction: rtl;
+   direction: rtl;
 }
 #topmenu {
-    width: 940px;
+   width: 940px;
 }
 #firstcontrols {
-    padding-right: 20px;
+   padding-right: 20px;
 }
 
 #sitetitle h1{
-    Background: url("/statics/images/logo.png") right 0 no-repeat transparent;
-    text-indent: 100px;
-    height: 100px;
-    font-size: 40px;
-    padding-top: 15px;
-    margin-top: 40px;
+   font-size: 40px;
+   text-align: center;
 }
 
 #sitetitle p {
-    margin: -60px 100px 0 0px;
-    font-size: 15px;
+   margin: -60px 100px 0 0px;
+   font-size: 15px;
 }
 
 .small {
-    font-size: 12px;
+   font-size: 12px;
 }
 .ftitle {
-    font-size: 20px;
+   font-size: 20px;
 }
 .nav li a {
-    font-size: 14px;
+   font-size: 14px;
 }
 
 .sociallinks {
-    float: left;
+   float: left;
 }
 
 .left{

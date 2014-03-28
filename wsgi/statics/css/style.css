@@ -10,12 +10,8 @@
 }
 
 #sitetitle h1{
-    Background: url("/statics/images/logo.png") 0 0 no-repeat transparent;
     text-indent: 100px;
-    height: 100px;
     font-size: 50px;
-    padding-top: 10px;
-    margin-top: 40px;
 }
 
 #sitetitle p {
