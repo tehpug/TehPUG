@@ -10,6 +10,7 @@ if [ ! -f $OPENSHIFT_DATA_DIR/sqlite3.db ]
 then
     echo "Executing 'python $OPENSHIFT_REPO_DIR/wsgi/manage.py syncdb --noinput'"
     python "$OPENSHIFT_REPO_DIR"wsgi/manage.py syncdb --noinput
+    python "$OPENSHIFT_REPO_DIR"wsgi/manage.py createsuperuser --username admin --email k1.hedayati93@gmail.com --noinput
     python "$OPENSHIFT_REPO_DIR".openshift/action_hooks/secure_db.py | tee ${OPENSHIFT_DATA_DIR}/CREDENTIALS
 else
     echo "Executing 'python $OPENSHIFT_REPO_DIR/wsgi/manage.py syncdb --noinput'"

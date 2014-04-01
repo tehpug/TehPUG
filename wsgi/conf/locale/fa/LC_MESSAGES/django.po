@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-29 20:38+0430\n"
+"POT-Creation-Date: 2014-04-01 01:08+0430\n"
 "PO-Revision-Date: 2013-12-09 23:05+0430\n"
 "Last-Translator: Behnam Ahmad Khan Beigi <b3hnam@gnu.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -269,12 +269,12 @@ msgstr "بعدی"
 msgid " TehPUG "
 msgstr " پاگ تهران "
 
-#: news/templates/news_view.html:19 templates/index.html:103
+#: news/templates/news_view.html:19 templates/index.html:100
 #: templates/page.html:12
 msgid "On"
 msgstr "در"
 
-#: news/templates/news_view.html:19 templates/index.html:103
+#: news/templates/news_view.html:19 templates/index.html:100
 #: templates/page.html:12
 msgid "by"
 msgstr "توسط"
@@ -341,7 +341,7 @@ msgstr "پروژه"
 msgid "Projects"
 msgstr "پروژه‌ها"
 
-#: projects/models.py:131 templates/index.html:54
+#: projects/models.py:131 templates/index.html:53
 msgid "Address"
 msgstr "نشانی"
 
@@ -487,7 +487,6 @@ msgid "Sponsors"
 msgstr "حامیان"
 
 #: templates/base.html:127
-#, fuzzy
 msgid "Copyright 2013-2014 TehPUG Community"
 msgstr "کپی‌رایت ۲۰۱۳−۲۰۱۴ اجتماع پاگ تهران"
 
@@ -515,7 +514,7 @@ msgstr "میلینگ لیست"
 msgid "Tehran Python User Group"
 msgstr "گروه کاربران پایتون تهران"
 
-#: templates/index.html:57
+#: templates/index.html:56
 msgid ""
 "Tehran, Africa St, Nor St (Africa to the north after the Zafar, before the "
 "gas station) - No. 18, Tosan Co. training hall"
@@ -523,27 +522,27 @@ msgstr ""
 "تهران، خیابان آفریقا - کوچه نور (آفریقا به سمت شمال بعد از ظفر، قبل از پمپ "
 "بنزین) - پلاک ۱۸، سالن آموزش شرکت توسن"
 
-#: templates/index.html:61
+#: templates/index.html:60
 msgid "More Information"
 msgstr "اطلاعات بیشتر"
 
-#: templates/index.html:64
+#: templates/index.html:63
 msgid "Keyvan Hedayati"
 msgstr "کیوان هدایتی"
 
-#: templates/index.html:64
+#: templates/index.html:63
 msgid "+98-936-8347120"
 msgstr "۰۹۳۶۸۳۴۷۱۲۰"
 
-#: templates/index.html:69 templates/index.html.py:74
+#: templates/index.html:67 templates/index.html.py:72
 msgid "View"
 msgstr "دیدن"
 
-#: templates/index.html:69 templates/index.html.py:76
+#: templates/index.html:67 templates/index.html.py:74
 msgid "Tosan Co."
 msgstr "شرکت توسن"
 
-#: templates/index.html:69 templates/index.html.py:78
+#: templates/index.html:67 templates/index.html.py:76
 msgid "in a larger map"
 msgstr "در یک نقشهٔ بزرگ"
 
