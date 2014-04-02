@@ -253,5 +253,5 @@ ALLOWED_HOSTS = (
     "www.tehpug.ir",
     "tehpug.ir",
     "127.0.0.1",
-    "tehpug-tehpug.rhcloud.com",
+    "*-tehpug.rhcloud.com",
 )
