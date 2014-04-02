@@ -248,10 +248,9 @@ LOCALE_PATHS = (
 )
 
 ALLOWED_HOSTS = (
-    ".prod.rhcloud.com",
+    ".rhcloud.com",
     "127.0.0.1:7020",
     "www.tehpug.ir",
     "tehpug.ir",
     "127.0.0.1",
-    "*-tehpug.rhcloud.com",
 )
