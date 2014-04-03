@@ -62,5 +62,5 @@ def quote(url):
 
 
 def full_path(absolute_url):
-    site = getattr(settings, "URL", "www.karajlug.org")
+    site = getattr(settings, "URL", "tehpug.ir")
     return "http://%s%s" % (site, absolute_url)

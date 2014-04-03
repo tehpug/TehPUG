@@ -91,7 +91,7 @@ class Book(models.Model):
 
     def full_path(self):
         from django.conf import settings
-        site = getattr(settings, "URL", "www.karajlug.org")
+        site = getattr(settings, "URL", "tehpug.ir")
         return "%s%s" % (site, self.get_absolute_url())
 
     def irc_repr(self, logentry):
