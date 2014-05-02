@@ -24,6 +24,7 @@ from django.utils.translation import ugettext as _
 from django.utils.safestring import mark_safe
 from django.forms.formsets import all_valid
 from django.forms.util import ErrorList
+from django_markdown.admin import MarkdownModelAdmin
 
 from .models import Member, MemberDetail
 
@@ -33,7 +34,7 @@ def email(obj):
 email.short_description = "Email"
 
 
-class MemberAdmin(admin.ModelAdmin):
+class MemberAdmin(MarkdownModelAdmin):
     list_display = ("user", "link", "avatar", "weight", "creator")
     ordering = ("weight", )
     list_editable = ("weight", )
@@ -45,7 +46,7 @@ class MemberAdmin(admin.ModelAdmin):
         obj.save()
 
 
-class MemberDetailsAdmin(admin.ModelAdmin):
+class MemberDetailsAdmin(MarkdownModelAdmin):
     list_display = ("language", "member", "field_name", "field_value", "user",
                     "weight")
     ordering = ("weight", )

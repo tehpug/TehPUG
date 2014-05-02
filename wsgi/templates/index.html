@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load django_markdown %}
 {% load i18n %}
 {% load appfilters %}
 {% load staticfiles %}
@@ -126,7 +127,7 @@
         </h2>
         <section>
           {% autoescape off %}
-          {{ news.content|linebreaks }}
+          {{ news.content | markdown | linebreaks}}
           {% endautoescape %}
         </section>
         <span>

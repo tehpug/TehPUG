@@ -18,12 +18,13 @@
 # -----------------------------------------------------------------------------
 
 from django.contrib import admin
+from django_markdown.admin import MarkdownModelAdmin
 from django.utils.translation import ugettext as _
 
 from .models import Project, Repository
 
 
-class ProjectAdmin(admin.ModelAdmin):
+class ProjectAdmin(MarkdownModelAdmin):
     """
     Admin interface class for project model
     """
@@ -40,7 +41,7 @@ class ProjectAdmin(admin.ModelAdmin):
         obj.save()
 
 
-class RepositoryAdmin(admin.ModelAdmin):
+class RepositoryAdmin(MarkdownModelAdmin):
     """
     Admin interface class for repository model
     """

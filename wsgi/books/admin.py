@@ -18,11 +18,12 @@
 # -----------------------------------------------------------------------------
 
 from django.contrib import admin
+from django_markdown.admin import MarkdownModelAdmin
 
 from .models import Book
 
 
-class BookAdmin(admin.ModelAdmin):
+class BookAdmin(MarkdownModelAdmin):
     """
     Admin interface for book model.
     """

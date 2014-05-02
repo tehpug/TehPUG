@@ -18,11 +18,12 @@
 # -----------------------------------------------------------------------------
 
 from django.contrib import admin
+from django_markdown.admin import MarkdownModelAdmin
 
 from .models import UploadFile
 
 
-class UPAdmin(admin.ModelAdmin):
+class UPAdmin(MarkdownModelAdmin):
     """
     Admin interface class for news model
     """

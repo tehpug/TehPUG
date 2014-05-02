@@ -18,11 +18,12 @@
 # -----------------------------------------------------------------------------
 
 from django.contrib import admin
+from django_markdown.admin import MarkdownModelAdmin
 
 from news.models import News
 
 
-class NewsAdmin(admin.ModelAdmin):
+class NewsAdmin(MarkdownModelAdmin):
     """
     Admin interface class for news model
     """
