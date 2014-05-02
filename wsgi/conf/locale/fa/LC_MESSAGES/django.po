@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-01 01:08+0430\n"
+"POT-Creation-Date: 2014-05-02 16:04+0430\n"
 "PO-Revision-Date: 2013-12-09 23:05+0430\n"
 "Last-Translator: Behnam Ahmad Khan Beigi <b3hnam@gnu.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -269,12 +269,12 @@ msgstr "بعدی"
 msgid " TehPUG "
 msgstr " پاگ تهران "
 
-#: news/templates/news_view.html:19 templates/index.html:100
+#: news/templates/news_view.html:19 templates/index.html:132
 #: templates/page.html:12
 msgid "On"
 msgstr "در"
 
-#: news/templates/news_view.html:19 templates/index.html:100
+#: news/templates/news_view.html:19 templates/index.html:132
 #: templates/page.html:12
 msgid "by"
 msgstr "توسط"
@@ -486,7 +486,7 @@ msgstr "پاگ تهران در"
 msgid "Sponsors"
 msgstr "حامیان"
 
-#: templates/base.html:127
+#: templates/base.html:129
 msgid "Copyright 2013-2014 TehPUG Community"
 msgstr "کپی‌رایت ۲۰۱۳−۲۰۱۴ اجتماع پاگ تهران"
 
@@ -515,36 +515,60 @@ msgid "Tehran Python User Group"
 msgstr "گروه کاربران پایتون تهران"
 
 #: templates/index.html:56
+msgid "Sessions"
+msgstr "جلسات"
+
+#: templates/index.html:59
 msgid ""
 "Tehran, Africa St, Nor St (Africa to the north after the Zafar, before the "
-"gas station) - No. 18, Tosan Co. training hall"
+"gas station), No 18, Tosan Co. Training Hall"
 msgstr ""
-"تهران، خیابان آفریقا - کوچه نور (آفریقا به سمت شمال بعد از ظفر، قبل از پمپ "
-"بنزین) - پلاک ۱۸، سالن آموزش شرکت توسن"
+"تهران، خیابان آفریقا، کوچه نور (آفریقا به سمت شمال بعد از ظفر، قبل از پمپ "
+"بنزین)، پلاک ۱۸، سالن آموزش شرکت توسن"
 
-#: templates/index.html:60
+#: templates/index.html:63 templates/index.html.py:92
 msgid "More Information"
 msgstr "اطلاعات بیشتر"
 
-#: templates/index.html:63
+#: templates/index.html:66
 msgid "Keyvan Hedayati"
 msgstr "کیوان هدایتی"
 
-#: templates/index.html:63
+#: templates/index.html:66
 msgid "+98-936-8347120"
 msgstr "۰۹۳۶۸۳۴۷۱۲۰"
 
-#: templates/index.html:67 templates/index.html.py:72
+#: templates/index.html:70 templates/index.html.py:75 templates/index.html:99
+#: templates/index.html.py:104
 msgid "View"
 msgstr "دیدن"
 
-#: templates/index.html:67 templates/index.html.py:74
+#: templates/index.html:70 templates/index.html.py:77
 msgid "Tosan Co."
 msgstr "شرکت توسن"
 
-#: templates/index.html:67 templates/index.html.py:76
+#: templates/index.html:70 templates/index.html.py:79 templates/index.html:99
+#: templates/index.html.py:108
 msgid "in a larger map"
 msgstr "در یک نقشهٔ بزرگ"
+
+#: templates/index.html:86
+msgid "Workshops"
+msgstr "کارگاه‌ها"
+
+#: templates/index.html:88
+msgid "Tehran, Saadat Abad, Southern Allameh st, Eastern 36th, No 22, Kava Co."
+msgstr ""
+"تهران، سعادت آباد، علامه جنوبی، کوچه سی و ششم شرقی، پلاک ۲۲، شرکت کاوا "
+"ارتباطات هوشمند"
+
+#: templates/index.html:95
+msgid "Nima Norozi"
+msgstr "نیما نوروزی"
+
+#: templates/index.html:99 templates/index.html.py:106
+msgid "Kava Co."
+msgstr "شرکت کاوا ارتباطات هوشمند"
 
 #: templates/social_links.html:4
 msgid "Share it"
@@ -583,20 +607,6 @@ msgstr "به اشتراک بگذارید"
 
 #~ msgid "SFD 2011"
 #~ msgstr "روز آزادی نرم‌افزار ۲۰۱۱"
-
-#~ msgid ""
-#~ "Karajlugers celeberate Software freedom day along side with the world for "
-#~ "the second year in 2011"
-#~ msgstr ""
-#~ "کرج‌لاگی‌ها جشن روز آزادی نرم‌افزار را برای دومین بار در سال ۲۰۱۱ به‌همراه "
-#~ "سایر جهانیان جشن گرفتند."
-
-#~ msgid ""
-#~ "Karaj Linux User Group is a community that is active on GNU/Linux and "
-#~ "Free Software fields."
-#~ msgstr ""
-#~ "کرج‌لاگ یا گروه کاربران لینوکس کرج اجتماعی است که در زمینهٔ گنو/لینوکس و "
-#~ "نرم‌افزارهای آزاد فعال است. "
 
 #~ msgid "Full Name"
 #~ msgstr "نام کامل"
