@@ -41,13 +41,12 @@ MANAGERS = ADMINS
 if ON_OPENSHIFT:
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(os.environ['OPENSHIFT_DATA_DIR'],
-                                 'sqlite3.db'),
-            'USER': '',
-            'PASSWORD': '',
-            'HOST': '',
-            'PORT': '',
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'tehpug',
+            'USER': os.environ.get('OPENSHIFT_POSTGRESQL_DB_USERNAME'),
+            'PASSWORD': os.environ.get('OPENSHIFT_POSTGRESQL_DB_PASSWORD'),
+            'HOST': os.environ.get('OPENSHIFT_POSTGRESQL_DB_HOST'),
+            'PORT': os.environ.get('OPENSHIFT_POSTGRESQL_DB_PORT'),
         }
     }
 else:
