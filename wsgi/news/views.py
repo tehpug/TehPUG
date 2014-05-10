@@ -22,6 +22,8 @@ from django.template import RequestContext
 from django.http import Http404
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
 from django.conf import settings
+from django.utils import translation
+
 
 from news.models import News
 
@@ -48,7 +50,8 @@ def index(request):
     """
     show all the news with pagination.
     """
-    news = News.objects.all().order_by('-date')
+    lang = translation.get_language()
+    news = News.objects.filter(lang=lang).order_by('-date')
     p = Paginator(news, settings.NEWS_LIMIT)
 
     try:

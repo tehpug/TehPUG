@@ -22,8 +22,6 @@ from django.contrib.auth.models import User
 from django.utils.translation import ugettext as _
 from django.conf import settings
 
-from locales.managers import I18nManager
-
 
 class Page(models.Model):
     """
@@ -51,9 +49,6 @@ class Page(models.Model):
                                 verbose_name=_('Date and Time'))
 
     weight = models.IntegerField(_("Weight"), default=50)
-
-    pages = I18nManager()
-    objects = models.Manager()
 
     def __unicode__(self):
         return self.title
@@ -94,8 +89,6 @@ class FirstPage(models.Model):
 
     date = models.DateTimeField(auto_now_add=True, auto_now=False,
                                 verbose_name=_('Date and Time'))
-
-    objects = I18nManager()
 
     def __unicode__(self):
         return self.title

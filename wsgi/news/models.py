@@ -22,8 +22,6 @@ from django.utils.translation import ugettext as _
 from django.contrib.auth.models import User
 from django.conf import settings
 
-from locales.managers import I18nManager
-
 
 class News(models.Model):
     """
@@ -40,8 +38,6 @@ class News(models.Model):
 
     date = models.DateTimeField(auto_now_add=True, auto_now=False,
                                 verbose_name=_('Date and Time'))
-
-    objects = I18nManager()
 
     def __unicode__(self):
         return self.title
