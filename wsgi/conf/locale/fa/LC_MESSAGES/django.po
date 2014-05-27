@@ -151,11 +151,11 @@ msgstr "تاریخ و زمان"
 msgid "FAQ"
 msgstr "سؤال‌های متداول"
 
-#: karajlug_org/settings.py:88 templates/base.html:61
+#: TehPUG_org/settings.py:88 templates/base.html:61
 msgid "Persian"
 msgstr "فارسی"
 
-#: karajlug_org/settings.py:89 templates/base.html:59
+#: TehPUG_org/settings.py:89 templates/base.html:59
 msgid "English"
 msgstr "انگلیسی"
 
@@ -551,19 +551,19 @@ msgid "Share it"
 msgstr "به اشتراک بگذارید"
 
 #, fuzzy
-#~ msgid "A KarajLUG project"
+#~ msgid "A TehPUG project"
 #~ msgstr "یک پروژه از پاگ تهران"
 
 #, fuzzy
-#~ msgid "KarajLUG Project"
+#~ msgid "TehPUG Project"
 #~ msgstr "پروژه‌های پاگ تهران"
 
 #, fuzzy
-#~ msgid "Karajlug"
+#~ msgid "TehPUG"
 #~ msgstr "کرج لاگ"
 
 #, fuzzy
-#~ msgid " KarajLug "
+#~ msgid " TehPUG "
 #~ msgstr "کرج لاگ"
 
 #~ msgid "Events"
@@ -585,7 +585,7 @@ msgstr "به اشتراک بگذارید"
 #~ msgstr "روز آزادی نرم‌افزار ۲۰۱۱"
 
 #~ msgid ""
-#~ "Karajlugers celeberate Software freedom day along side with the world for "
+#~ "TehPUGers celeberate Software freedom day along side with the world for "
 #~ "the second year in 2011"
 #~ msgstr ""
 #~ "کرج‌لاگی‌ها جشن روز آزادی نرم‌افزار را برای دومین بار در سال ۲۰۱۱ به‌همراه "

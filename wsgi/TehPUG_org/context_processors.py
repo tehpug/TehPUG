@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
-#    Karajlug.org
-#    Copyright (C) 2010  Karajlug community
+#    TehPUG.org
+#    Copyright (C) 2010  TehPUG community
 #
 #    This program is free software; you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -16,31 +16,17 @@
 #    with this program; if not, write to the Free Software Foundation, Inc.,
 #    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 # -----------------------------------------------------------------------------
+import os
+import sys
 
-from django.shortcuts import render_to_response as rr
-from django.template import RequestContext
+import django
 from django.conf import settings
 
-from news.models import News
-from page.models import FirstPage
 
-
-def index(request):
-    """
-    index view of karajlug.org
-    """
-    news = News.objects.all().order_by("-date")[:settings.NEWS_LIMIT]
-    try:
-        page = FirstPage.objects.latest("date")
-    except FirstPage.DoesNotExist:
-        page = None
-    return rr("index.html",
-              {"news_list": news,
-               "page": page,
-               },
-              context_instance=RequestContext(request))
-
-
-def contact(request):
-    return rr("contact.html",
-              context_instance=RequestContext(request))
+def info(request):
+    pyversion = ".".join([str(i) for i in sys.version_info])
+    djversion = ".".join([str(i) for i in django.VERSION])
+    return {"VERSION": settings.VERSION,
+            "PYVERSION": pyversion,
+            "DJVERSION": djversion,
+            }

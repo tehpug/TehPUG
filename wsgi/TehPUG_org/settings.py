@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
-#    Karajlug.org
-#    Copyright (C) 2010  Karajlug community
+#    TehPUG.org
+#    Copyright (C) 2010  TehPUG community
 #
 #    This program is free software; you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -63,7 +63,7 @@ else:
     }
 
 try:
-    import karajlug_secret as ks
+    import TehPUG_secret as ks
     DATABASES = ks.DATABASES
 except ImportError:
     pass
@@ -169,11 +169,11 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-LEAF_URLCONF = 'karajlug_org.urls'
+LEAF_URLCONF = 'TehPUG_org.urls'
 ROOT_URLCONF = 'multilang.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-# WSGI_APPLICATION = 'karajlug_org.wsgi.application'
+# WSGI_APPLICATION = 'TehPUG_org.wsgi.application'
 
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR, '..', 'templates'),
@@ -234,7 +234,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.request",
     "django.core.context_processors.media",
     "django.contrib.messages.context_processors.messages",
-    "karajlug_org.context_processors.info",
+    "TehPUG_org.context_processors.info",
 )
 
 BOOK_IN_PAGE = 5
