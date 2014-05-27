@@ -131,6 +131,8 @@
           {% endautoescape %}
         </section>
         <span>
+          <a href="{{ news.get_absolute_url }}#disqus_thread"></a>
+          <a href="{{ news.get_absolute_url }}"><i class="fa fa-comments"></i></a>
           {% trans "On" %} {{ news.date|format_date:news.lang }} {% trans "by" %} {{ news.user }}
         </span>
       </article>

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-02 16:04+0430\n"
+"POT-Creation-Date: 2014-05-27 09:34+0430\n"
 "PO-Revision-Date: 2013-12-09 23:05+0430\n"
 "Last-Translator: Behnam Ahmad Khan Beigi <b3hnam@gnu.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,8 +17,8 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Virtaal 0.7.1\n"
 
-#: books/models.py:37 faq/models.py:36 members/models.py:127 news/models.py:37
-#: page/models.py:46 page/models.py:91 projects/models.py:42
+#: books/models.py:37 faq/models.py:36 members/models.py:127 news/models.py:35
+#: page/models.py:44 page/models.py:86 projects/models.py:42
 msgid "Language"
 msgstr "زبان"
 
@@ -30,7 +30,7 @@ msgstr "زبان وب‌گاه (هم اکنون en-us)"
 msgid "Book Name"
 msgstr "اسم کتاب"
 
-#: books/models.py:42 page/models.py:37 projects/models.py:51
+#: books/models.py:42 page/models.py:35 projects/models.py:51
 msgid "Slug"
 msgstr "نشانی مشخص"
 
@@ -129,7 +129,7 @@ msgid "Home page"
 msgstr "صفحهٔ خانگی"
 
 #: faq/models.py:31 mediacenter/models.py:32 members/models.py:30
-#: news/models.py:33 page/models.py:33 page/models.py:83
+#: news/models.py:31 page/models.py:31 page/models.py:78
 msgid "User"
 msgstr "کاربر"
 
@@ -141,8 +141,8 @@ msgstr "سؤال"
 msgid "Answer"
 msgstr "جواب"
 
-#: faq/models.py:41 mediacenter/models.py:34 news/models.py:42
-#: page/models.py:51 page/models.py:96
+#: faq/models.py:41 mediacenter/models.py:34 news/models.py:40
+#: page/models.py:49 page/models.py:91
 msgid "Date and Time"
 msgstr "تاریخ و زمان"
 
@@ -151,11 +151,11 @@ msgstr "تاریخ و زمان"
 msgid "FAQ"
 msgstr "سؤال‌های متداول"
 
-#: karajlug_org/settings.py:88 templates/base.html:61
+#: karajlug_org/settings.py:87 templates/base.html:61
 msgid "Persian"
 msgstr "فارسی"
 
-#: karajlug_org/settings.py:89 templates/base.html:59
+#: karajlug_org/settings.py:88 templates/base.html:59
 msgid "English"
 msgstr "انگلیسی"
 
@@ -237,15 +237,15 @@ msgstr "جزئیات اعضا"
 msgid "Bio"
 msgstr "شرح حال"
 
-#: news/models.py:35 page/models.py:35 page/models.py:86
+#: news/models.py:33 page/models.py:33 page/models.py:81
 msgid "Title"
 msgstr "عنوان"
 
-#: news/models.py:36 page/models.py:40 page/models.py:89
+#: news/models.py:34 page/models.py:38 page/models.py:84
 msgid "News content"
 msgstr "محتوا اخبار"
 
-#: news/models.py:71 news/models.py:72
+#: news/models.py:67 news/models.py:68
 msgid "News"
 msgstr "اخبار"
 
@@ -253,7 +253,7 @@ msgstr "اخبار"
 msgid "previous"
 msgstr "قبلی"
 
-#: news/templates/news_list.html:18 page/models.py:78
+#: news/templates/news_list.html:18 page/models.py:73
 msgid "Page"
 msgstr "صفحه"
 
@@ -269,37 +269,37 @@ msgstr "بعدی"
 msgid " TehPUG "
 msgstr " پاگ تهران "
 
-#: news/templates/news_view.html:19 templates/index.html:132
+#: news/templates/news_view.html:19 templates/index.html:134
 #: templates/page.html:12
 msgid "On"
 msgstr "در"
 
-#: news/templates/news_view.html:19 templates/index.html:132
+#: news/templates/news_view.html:19 templates/index.html:134
 #: templates/page.html:12
 msgid "by"
 msgstr "توسط"
 
-#: page/models.py:42
+#: page/models.py:40
 msgid "Publish"
 msgstr "انتشار"
 
-#: page/models.py:44
+#: page/models.py:42
 msgid "Appear in navigation?"
 msgstr "در جستجو ظاهر شود؟"
 
-#: page/models.py:53
+#: page/models.py:51
 msgid "Weight"
 msgstr "وزن"
 
-#: page/models.py:77 page/templates/nav.html:2
+#: page/models.py:72 page/templates/nav.html:2
 msgid "Pages"
 msgstr "صفحه‌ها"
 
-#: page/models.py:104
+#: page/models.py:97
 msgid "First Pages"
 msgstr "صفحات اول"
 
-#: page/models.py:105
+#: page/models.py:98
 msgid "First Page"
 msgstr "صفحهٔ اول"
 
@@ -341,7 +341,7 @@ msgstr "پروژه"
 msgid "Projects"
 msgstr "پروژه‌ها"
 
-#: projects/models.py:131 templates/index.html:53
+#: projects/models.py:131 templates/index.html:55
 msgid "Address"
 msgstr "نشانی"
 
@@ -482,11 +482,11 @@ msgstr "مجله لینوکس‌مگ"
 msgid "TehPUG in"
 msgstr "پاگ تهران در"
 
-#: templates/base.html:122
+#: templates/base.html:125
 msgid "Sponsors"
 msgstr "حامیان"
 
-#: templates/base.html:129
+#: templates/base.html:132
 msgid "Copyright 2013-2014 TehPUG Community"
 msgstr "کپی‌رایت ۲۰۱۳−۲۰۱۴ اجتماع پاگ تهران"
 
@@ -510,15 +510,15 @@ msgstr "کانال"
 msgid "Mailing List"
 msgstr "میلینگ لیست"
 
-#: templates/index.html:24
+#: templates/index.html:26
 msgid "Tehran Python User Group"
 msgstr "گروه کاربران پایتون تهران"
 
-#: templates/index.html:56
+#: templates/index.html:58
 msgid "Sessions"
 msgstr "جلسات"
 
-#: templates/index.html:59
+#: templates/index.html:61
 msgid ""
 "Tehran, Africa St, Nor St (Africa to the north after the Zafar, before the "
 "gas station), No 18, Tosan Co. Training Hall"
@@ -526,49 +526,53 @@ msgstr ""
 "تهران، خیابان آفریقا، کوچه نور (آفریقا به سمت شمال بعد از ظفر، قبل از پمپ "
 "بنزین)، پلاک ۱۸، سالن آموزش شرکت توسن"
 
-#: templates/index.html:63 templates/index.html.py:92
+#: templates/index.html:65 templates/index.html.py:94
 msgid "More Information"
 msgstr "اطلاعات بیشتر"
 
-#: templates/index.html:66
+#: templates/index.html:68
 msgid "Keyvan Hedayati"
 msgstr "کیوان هدایتی"
 
-#: templates/index.html:66
+#: templates/index.html:68
 msgid "+98-936-8347120"
 msgstr "۰۹۳۶۸۳۴۷۱۲۰"
 
-#: templates/index.html:70 templates/index.html.py:75 templates/index.html:99
-#: templates/index.html.py:104
+#: templates/index.html:72 templates/index.html.py:77 templates/index.html:101
+#: templates/index.html.py:106
 msgid "View"
 msgstr "دیدن"
 
-#: templates/index.html:70 templates/index.html.py:77
+#: templates/index.html:72 templates/index.html.py:79
 msgid "Tosan Co."
 msgstr "شرکت توسن"
 
-#: templates/index.html:70 templates/index.html.py:79 templates/index.html:99
-#: templates/index.html.py:108
+#: templates/index.html:72 templates/index.html.py:81 templates/index.html:101
+#: templates/index.html.py:110
 msgid "in a larger map"
 msgstr "در یک نقشهٔ بزرگ"
 
-#: templates/index.html:86
+#: templates/index.html:88
 msgid "Workshops"
 msgstr "کارگاه‌ها"
 
-#: templates/index.html:88
+#: templates/index.html:90
 msgid "Tehran, Saadat Abad, Southern Allameh st, Eastern 36th, No 22, Kava Co."
 msgstr ""
 "تهران، سعادت آباد، علامه جنوبی، کوچه سی و ششم شرقی، پلاک ۲۲، شرکت کاوا "
 "ارتباطات هوشمند"
 
-#: templates/index.html:95
+#: templates/index.html:97
 msgid "Nima Norozi"
 msgstr "نیما نوروزی"
 
-#: templates/index.html:99 templates/index.html.py:106
+#: templates/index.html:101 templates/index.html.py:108
 msgid "Kava Co."
 msgstr "شرکت کاوا ارتباطات هوشمند"
+
+#: templates/index.html:135
+msgid "Comments"
+msgstr "نظر"
 
 #: templates/social_links.html:4
 msgid "Share it"
