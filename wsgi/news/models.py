@@ -1,6 +1,6 @@
 # coding: utf-8
 # -----------------------------------------------------------------------------
-#    TehPUG.org
+#    karajlug.org
 #    Copyright (C) 2010-2012  TehPUG community
 #
 #    This program is free software; you can redistribute it and/or modify
