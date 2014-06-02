@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
-#    Karajlug.org
-#    Copyright (C) 2010  Karajlug community
+#    karajlug.org
+#    Copyright (C) 2010  karajlug community
 #
 #    This program is free software; you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -23,7 +23,7 @@ from django.template import RequestContext
 
 def index(request):
     """
-    index view of karajlug.org
+    index view of tehpug.ir
     """
     return rr("index.html", {},
               context_instance=RequestContext(request))

@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-02 19:03+0430\n"
+"POT-Creation-Date: 2014-06-02 22:48+0430\n"
 "PO-Revision-Date: 2013-12-09 23:05+0430\n"
 "Last-Translator: Behnam Ahmad Khan Beigi <b3hnam@gnu.org>\n"
 "Language: fa\n"
@@ -146,14 +146,6 @@ msgstr "تاریخ و زمان"
 #: templates/faq.html:6
 msgid "FAQ"
 msgstr "سؤال‌های متداول"
-
-#: karajlug_org/settings.py:87 templates/base.html:61
-msgid "Persian"
-msgstr "فارسی"
-
-#: karajlug_org/settings.py:88 templates/base.html:59
-msgid "English"
-msgstr "انگلیسی"
 
 #: mediacenter/models.py:30
 msgid "File"
@@ -385,6 +377,14 @@ msgstr "بارگیری"
 msgid "Repositories"
 msgstr "مخازن"
 
+#: tehpug/settings.py:88 templates/base.html:61
+msgid "Persian"
+msgstr "فارسی"
+
+#: tehpug/settings.py:89 templates/base.html:59
+msgid "English"
+msgstr "انگلیسی"
+
 #: templates/404.html:4
 msgid "Page not found!"
 msgstr "صفحه‌ای یافت نشد!"
@@ -463,7 +463,7 @@ msgstr "پیوندهای مفید"
 
 #: templates/base.html:107
 #, fuzzy
-msgid "TehPUG on Wikipedia"
+msgid "tehpug on Wikipedia"
 msgstr "پاگ تهران در ویکیپدیا"
 
 #: templates/base.html:108
@@ -475,8 +475,8 @@ msgid "PySocial"
 msgstr "اجتماع پایتونی‌ها"
 
 #: templates/base.html:110
-msgid "LinuxMag"
-msgstr "مجله لینوکس‌مگ"
+msgid "Salam Donya"
+msgstr "مجله سلام دنیا"
 
 #: templates/base.html:116
 msgid "TehPUG in"
@@ -601,64 +601,3 @@ msgstr "شرکت کاوا ارتباطات هوشمند"
 #: templates/social_links.html:4
 msgid "Share it"
 msgstr "به اشتراک بگذارید"
-
-#~ msgid "previous"
-#~ msgstr "قبلی"
-
-#~ msgid "of"
-#~ msgstr "از"
-
-#~ msgid "next"
-#~ msgstr "بعدی"
-
-#~ msgid "Comments"
-#~ msgstr "نظر"
-
-#, fuzzy
-#~ msgid "A KarajLUG project"
-#~ msgstr "یک پروژه از پاگ تهران"
-
-#, fuzzy
-#~ msgid "KarajLUG Project"
-#~ msgstr "پروژه‌های پاگ تهران"
-
-#, fuzzy
-#~ msgid "Karajlug"
-#~ msgstr "کرج لاگ"
-
-#, fuzzy
-#~ msgid " KarajLug "
-#~ msgstr "کرج لاگ"
-
-#~ msgid "Events"
-#~ msgstr "رویدادها"
-
-#~ msgid "Other Lugs"
-#~ msgstr "لاگ‌های دیگر"
-
-#~ msgid "What is LUG?"
-#~ msgstr "لاگ چیست؟"
-
-#~ msgid "Free Software Foundation"
-#~ msgstr "بنیاد نرم‌افزار‌های آزاد"
-
-#~ msgid "Linux Foundation"
-#~ msgstr "بنیاد لینوکس"
-
-#~ msgid "Full Name"
-#~ msgstr "نام کامل"
-
-#~ msgid "Email"
-#~ msgstr "رایانامه"
-
-#~ msgid "Password"
-#~ msgstr "گذرواژه"
-
-#~ msgid "Confirm password"
-#~ msgstr "تأیید گذرواژه"
-
-#~ msgid "Join"
-#~ msgstr "پیوستن"
-
-#~ msgid "Follow"
-#~ msgstr "دنبال‌کردن"

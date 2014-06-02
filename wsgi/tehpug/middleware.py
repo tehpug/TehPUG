@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
-#    Karajlug.org
-#    Copyright (C) 2010  Karajlug community
+#    karajlug.org
+#    Copyright (C) 2010-2012  karajlug community
 #
 #    This program is free software; you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -16,17 +16,35 @@
 #    with this program; if not, write to the Free Software Foundation, Inc.,
 #    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 # -----------------------------------------------------------------------------
-import os
-import sys
 
-import django
 from django.conf import settings
+from django.utils import translation
 
 
-def info(request):
-    pyversion = ".".join([str(i) for i in sys.version_info])
-    djversion = ".".join([str(i) for i in django.VERSION])
-    return {"VERSION": settings.VERSION,
-            "PYVERSION": pyversion,
-            "DJVERSION": djversion,
-            }
+class I18nMiddleware(object):
+    """
+    Set the default locale setting of page.
+    """
+    def process_request(self, request):
+        server = request.META["HTTP_HOST"]
+
+        lang = server.split(".")[0]
+        if lang == "en":
+            translation.activate("en")
+        else:
+            translation.activate("fa")
+        request.LANGUAGE_CODE = translation.get_language()
+        return None
+
+    def process_view(self, request, view_func, view_args, view_kwargs):
+        print ">>>>> ", view_func
+        return None
+
+    def process_template_response(self, request, response):
+        return response
+
+    def process_response(self, request, response):
+        return response
+
+    def process_exception(self, request, exception):
+        return None

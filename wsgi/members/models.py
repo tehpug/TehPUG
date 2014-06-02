@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
-#    Karajlug.org
-#    Copyright (C) 2010  Karajlug community
+#    karajlug.org
+#    Copyright (C) 2010  karajlug community
 #
 #    This program is free software; you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -24,7 +24,7 @@ from django.core.exceptions import ValidationError
 
 class Member(models.Model):
     """
-    Member model of karajlug.
+    Member model of tehpug.
     """
     user = models.OneToOneField(
         "auth.User", verbose_name=_("User"),

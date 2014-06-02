@@ -1,7 +1,7 @@
 # coding: utf-8
 # -----------------------------------------------------------------------------
-#    Karajlug.org
-#    Copyright (C) 2013  Karajlug community
+#    karajlug.org
+#    Copyright (C) 2013  TehPUG community
 #
 #    This program is free software; you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by

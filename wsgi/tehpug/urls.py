@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
-#    Karajlug.org
-#    Copyright (C) 2010  Karajlug community
+#    karajlug.org
+#    Copyright (C) 2010  karajlug community
 #
 #    This program is free software; you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -33,15 +33,15 @@ urlpatterns = patterns(
     (r'^members/', include('members.urls')),
     (r'^books/', include('books.urls')),
     (r'^bot/', include('dbot.urls')),
-    (r'^contact/$', 'karajlug_org.views.contact'),
-    (r'^$', 'karajlug_org.views.index'),
-    (r'^facebook/$', 'karajlug_org.views.facebook'),
-    (r'^twitter/$', 'karajlug_org.views.twitter'),
-    (r'^github/$', 'karajlug_org.views.github'),
-    (r'^trello/$', 'karajlug_org.views.trello'),
-    (r'^list/$', 'karajlug_org.views.list'),
-    (r'^youtube/$', 'karajlug_org.views.youtube'),
-    (r'^irc/$', 'karajlug_org.views.irc'),
+    (r'^contact/$', 'tehpug.views.contact'),
+    (r'^$', 'tehpug.views.index'),
+    (r'^facebook/$', 'tehpug.views.facebook'),
+    (r'^twitter/$', 'tehpug.views.twitter'),
+    (r'^github/$', 'tehpug.views.github'),
+    (r'^trello/$', 'tehpug.views.trello'),
+    (r'^list/$', 'tehpug.views.list'),
+    (r'^youtube/$', 'tehpug.views.youtube'),
+    (r'^irc/$', 'tehpug.views.irc'),
     (r'^admin/', include(admin.site.urls)),
 )
 

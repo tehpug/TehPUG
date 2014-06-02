@@ -8,5 +8,6 @@ setup(
     description='Tehran Python User Group',
     author='Keyvan Hedayati',
     author_email='k1.hedayati93@gmail.com',
-    url='https://github.com/tehpug/karajlug',
+    url='https://github.com/tehpug/TehPUG',
+    install_requires=['Django==1.5', 'pil==1.1.7'],
 )
