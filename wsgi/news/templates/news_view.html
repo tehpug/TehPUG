@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load i18n %}
 {% load appfilters %}
+{% load django_markdown %}
 
 {% block title %}
 {{ news.title }}
@@ -13,7 +14,7 @@
   <h1>{{ news.title }}</h1>
   <section>
     {% autoescape off %}
-    {{ news.content|linebreaks }}
+    {{ news.content | markdown | linebreaks }}
     {% endautoescape %}
   </section>
   <span>{% trans "On" %} {{ news.date|format_date:news.lang }} {% trans "by" %} {{ news.user }}</span>
