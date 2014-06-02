@@ -21,7 +21,7 @@
           {% endif %}
           <h4>{% trans 'Maintainer' %}: {% for maintainer in project.maintainers.all %}<a href="{{ maintainer.get_profile.get_absolute_url }}">{{ maintainer.get_full_name }}</a>, {% endfor %}</h4>
           {% if project.kproject %}
-          <h4>{% trans 'A TehPUG project' %}</h4>
+          <h4>{% trans 'A tehpug project' %}</h4>
           {% else %}
           <h4>{% trans 'Participated project' %}</h4>
           {% endif %}
@@ -41,7 +41,7 @@
       {% endif %}
       <h4>{% trans 'Maintainer' %}: {% for maintainer in project.maintainers.all %}<a href="{{ maintainer.get_profile.get_absolute_url }}">{{ maintainer.get_full_name }}</a>, {% endfor %}</h4>
       {% if project.kproject %}
-      <h4>{% trans 'A TehPUG project' %}</h4>
+      <h4>{% trans 'A tehpug project' %}</h4>
       {% else %}
       <h4>{% trans 'Participated project' %}</h4>
       {% endif %}

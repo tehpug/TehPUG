@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
 #    karajlug.org
-#    Copyright (C) 2010  TehPUG community
+#    Copyright (C) 2010  karajlug community
 #
 #    This program is free software; you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -24,7 +24,7 @@ from django.core.exceptions import ValidationError
 
 class Member(models.Model):
     """
-    Member model of TehPUG.
+    Member model of tehpug.
     """
     user = models.OneToOneField(
         "auth.User", verbose_name=_("User"),
@@ -82,7 +82,7 @@ class Member(models.Model):
 
     def full_path(self):
         from django.conf import settings
-        site = getattr(settings, "URL", "www.TehPUG.org")
+        site = getattr(settings, "URL", "www.tehpug.org")
         return "%s%s" % (site, self.get_absolute_url())
 
     def irc_repr(self, logentry):

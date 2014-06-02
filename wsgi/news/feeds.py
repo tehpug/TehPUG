@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
 #    karajlug.org
-#    Copyright (C) 2010  TehPUG community
+#    Copyright (C) 2010  karajlug community
 #
 #    This program is free software; you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -24,9 +24,9 @@ from .models import News
 
 
 class LatestNews(Feed):
-    title = "Latest TehPUG news."
+    title = "Latest tehpug news."
     link = "/news/"
-    description = "What happend in TehPUG?"
+    description = "What happend in tehpug?"
 
     def items(self):
         return News.objects.order_by('-date')[:settings.NEWS_LIMIT]
@@ -38,4 +38,4 @@ class LatestNews(Feed):
         return item.date
 
     def item_link(self, item):
-        return "http://TehPUG.ir/news/%s/" % item.id
+        return "http://tehpug.ir/news/%s/" % item.id

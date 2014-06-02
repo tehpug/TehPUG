@@ -151,11 +151,11 @@ msgstr "تاریخ و زمان"
 msgid "FAQ"
 msgstr "سؤال‌های متداول"
 
-#: TehPUG_org/settings.py:88 templates/base.html:61
+#: tehpug/settings.py:88 templates/base.html:61
 msgid "Persian"
 msgstr "فارسی"
 
-#: TehPUG_org/settings.py:89 templates/base.html:59
+#: tehpug/settings.py:89 templates/base.html:59
 msgid "English"
 msgstr "انگلیسی"
 
@@ -266,7 +266,7 @@ msgid "next"
 msgstr "بعدی"
 
 #: news/templates/news_view.html:7 templates/base.html:12
-msgid " TehPUG "
+msgid " tehpug "
 msgstr " پاگ تهران "
 
 #: news/templates/news_view.html:19 templates/index.html:100
@@ -304,7 +304,7 @@ msgid "First Page"
 msgstr "صفحهٔ اول"
 
 #: page/views.py:41 templates/base.html:44
-msgid "TehPUG"
+msgid "tehpug"
 msgstr "پاگ تهران"
 
 #: projects/models.py:46
@@ -330,7 +330,7 @@ msgstr "نمایش پروژه بر اساس این مقدار در منو نما
 
 #: projects/models.py:84
 #, fuzzy
-msgid "TehPUG Project"
+msgid "tehpug Project"
 msgstr "پروژه‌ پاگ تهران"
 
 #: projects/models.py:120 projects/models.py:129
@@ -365,7 +365,7 @@ msgstr "نگه‌دار"
 #: projects/templates/project_view.html:24 projects/templates/projects.html:24
 #: projects/templates/projects.html:44
 #, fuzzy
-msgid "A TehPUG project"
+msgid "A tehpug project"
 msgstr "پروژه‌ پاگ تهران"
 
 #: projects/templates/project_view.html:26 projects/templates/projects.html:26
@@ -463,7 +463,7 @@ msgstr "پیوندهای مفید"
 
 #: templates/base.html:107
 #, fuzzy
-msgid "TehPUG on Wikipedia"
+msgid "tehpug on Wikipedia"
 msgstr "پاگ تهران در ویکیپدیا"
 
 #: templates/base.html:108
@@ -479,7 +479,7 @@ msgid "LinuxMag"
 msgstr "مجله لینوکس‌مگ"
 
 #: templates/base.html:116
-msgid "TehPUG in"
+msgid "tehpug in"
 msgstr "پاگ تهران در"
 
 #: templates/base.html:122
@@ -487,11 +487,11 @@ msgid "Sponsors"
 msgstr "حامیان"
 
 #: templates/base.html:127
-msgid "Copyright 2013-2014 TehPUG Community"
+msgid "Copyright 2013-2014 tehpug Community"
 msgstr "کپی‌رایت ۲۰۱۳−۲۰۱۴ اجتماع پاگ تهران"
 
 #: templates/contact.html:10
-msgid "Stay in touch with TehPUG"
+msgid "Stay in touch with tehpug"
 msgstr "با پاگ تهران در تماس باشید"
 
 #: templates/contact.html:13
@@ -551,19 +551,19 @@ msgid "Share it"
 msgstr "به اشتراک بگذارید"
 
 #, fuzzy
-#~ msgid "A TehPUG project"
+#~ msgid "A tehpug project"
 #~ msgstr "یک پروژه از پاگ تهران"
 
 #, fuzzy
-#~ msgid "TehPUG Project"
+#~ msgid "tehpug Project"
 #~ msgstr "پروژه‌های پاگ تهران"
 
 #, fuzzy
-#~ msgid "TehPUG"
+#~ msgid "tehpug"
 #~ msgstr "کرج لاگ"
 
 #, fuzzy
-#~ msgid " TehPUG "
+#~ msgid " tehpug "
 #~ msgstr "کرج لاگ"
 
 #~ msgid "Events"
@@ -585,7 +585,7 @@ msgstr "به اشتراک بگذارید"
 #~ msgstr "روز آزادی نرم‌افزار ۲۰۱۱"
 
 #~ msgid ""
-#~ "TehPUGers celeberate Software freedom day along side with the world for "
+#~ "tehpugers celeberate Software freedom day along side with the world for "
 #~ "the second year in 2011"
 #~ msgstr ""
 #~ "کرج‌لاگی‌ها جشن روز آزادی نرم‌افزار را برای دومین بار در سال ۲۰۱۱ به‌همراه "

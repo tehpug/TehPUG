@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
 #    karajlug.org
-#    Copyright (C) 2010  TehPUG community
+#    Copyright (C) 2010  karajlug community
 #
 #    This program is free software; you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -81,7 +81,7 @@ class Project(models.Model):
         help_text=_("Projects will appear in menu respect to this value"))
 
     kproject = models.BooleanField(default=False,
-                                   verbose_name=_("TehPUG Project"))
+                                   verbose_name=_("tehpug Project"))
     desc = models.TextField(verbose_name=_("Description"),
                             blank=True, null=True)
 

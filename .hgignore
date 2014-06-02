@@ -20,4 +20,4 @@ syntax: glob
 *.wpr
 data/*
 django.mo
-TehPUG_secret.py
+tehpug_secret.py

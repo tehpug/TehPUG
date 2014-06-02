@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
 #    karajlug.org
-#    Copyright (C) 2010  TehPUG community
+#    Copyright (C) 2010  karajlug community
 #
 #    This program is free software; you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -29,7 +29,7 @@ from django.conf import settings
 @receiver(post_save, sender=LogEntry)
 def irc_send(signal, sender, **kwargs):
 
-    site = getattr(settings, "DOMAIN", "TehPUG.ir")
+    site = getattr(settings, "DOMAIN", "tehpug.ir")
     obj = kwargs["instance"].get_edited_object()
 
     func = getattr(obj, "irc_repr", None)

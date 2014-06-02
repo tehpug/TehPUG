@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
 #    karajlug.org
-#    Copyright (C) 2010  TehPUG community
+#    Copyright (C) 2010  karajlug community
 #
 #    This program is free software; you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -38,5 +38,5 @@ def show_page(request, slug):
 
     return rr("page.html",
               {"page": page,
-               "title": "%s | %s" % (_("TehPUG"), page.title)},
+               "title": "%s | %s" % (_("tehpug"), page.title)},
               context_instance=RequestContext(request))

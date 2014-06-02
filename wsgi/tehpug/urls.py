@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
 #    karajlug.org
-#    Copyright (C) 2010  TehPUG community
+#    Copyright (C) 2010  karajlug community
 #
 #    This program is free software; you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -33,8 +33,8 @@ urlpatterns = patterns(
     (r'^members/', include('members.urls')),
     (r'^books/', include('books.urls')),
     (r'^bot/', include('dbot.urls')),
-    (r'^contact/$', 'TehPUG_org.views.contact'),
-    (r'^$', 'TehPUG_org.views.index'),
+    (r'^contact/$', 'tehpug.views.contact'),
+    (r'^$', 'tehpug.views.index'),
     (r'^admin/', include(admin.site.urls)),
 )
 
