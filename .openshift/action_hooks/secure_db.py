@@ -2,7 +2,7 @@ import sys, os
 
 repo_dir = os.path.join(os.environ.get('OPENSHIFT_REPO_DIR'), 'wsgi')
 sys.path.insert(0, repo_dir)
-os.environ['DJANGO_SETTINGS_MODULE'] = 'karajlug_org.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'tehpug.settings'
 username = 'admin'
 email = 'k1.hedayati93@gmail.com'
 
