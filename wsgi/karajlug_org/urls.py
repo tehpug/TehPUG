@@ -35,6 +35,13 @@ urlpatterns = patterns(
     (r'^bot/', include('dbot.urls')),
     (r'^contact/$', 'karajlug_org.views.contact'),
     (r'^$', 'karajlug_org.views.index'),
+    (r'^facebook/$', 'karajlug_org.views.facebook'),
+    (r'^twitter/$', 'karajlug_org.views.twitter'),
+    (r'^github/$', 'karajlug_org.views.github'),
+    (r'^trello/$', 'karajlug_org.views.trello'),
+    (r'^list/$', 'karajlug_org.views.list'),
+    (r'^youtube/$', 'karajlug_org.views.youtube'),
+    (r'^irc/$', 'karajlug_org.views.irc'),
     (r'^admin/', include(admin.site.urls)),
 )
 
