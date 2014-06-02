@@ -475,8 +475,8 @@ msgid "PySocial"
 msgstr "اجتماع پایتونی‌ها"
 
 #: templates/base.html:110
-msgid "LinuxMag"
-msgstr "مجله لینوکس‌مگ"
+msgid "salam donya"
+msgstr "مجله سلام دنیا"
 
 #: templates/base.html:116
 msgid "tehpug in"
