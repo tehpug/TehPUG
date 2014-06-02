@@ -19,11 +19,10 @@
 
 from django.shortcuts import render_to_response as rr
 from django.template import RequestContext
-from django.http import Http404
+from django.http import Http404, HttpResponse
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
 from django.conf import settings
 from django.utils import translation
-
 
 from news.models import News
 
@@ -50,9 +49,16 @@ def index(request):
     """
     show all the news with pagination.
     """
+    return rr('news_list.html',
+              context_instance=RequestContext(request))
+
+
+def ajax(request):
+    """
+    load news with ajax
+    """
     lang = translation.get_language()
     news = News.objects.filter(lang=lang).order_by('-date')
-    p = Paginator(news, settings.NEWS_LIMIT)
 
     try:
         page = int(request.GET.get('page', '1'))
@@ -60,9 +66,18 @@ def index(request):
         page = 1
 
     try:
-        news_page = p.page(page)
-    except (EmptyPage, InvalidPage):
-        news_page = p.page(p.num_pages)
+        count = int(request.GET.get('count', '10'))
+    except ValueError:
+        count = 10
 
-    return rr('news_list.html', {'news': news_page},
-              context_instance=RequestContext(request))
+    if not 1 < count < 20:
+        count = 10
+
+    p = Paginator(news, count)
+
+    try:
+        return rr('ajax.html',
+                  {'news_list': p.page(page)},
+                  context_instance=RequestContext(request))
+    except (EmptyPage, InvalidPage):
+        return HttpResponse('')

@@ -1,15 +1,11 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Behnam Ahmad Khan Beigi <b3hnam@gnu.org>, 2013.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-27 09:34+0430\n"
+"POT-Creation-Date: 2014-06-02 19:03+0430\n"
 "PO-Revision-Date: 2013-12-09 23:05+0430\n"
 "Last-Translator: Behnam Ahmad Khan Beigi <b3hnam@gnu.org>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -249,35 +245,35 @@ msgstr "محتوا اخبار"
 msgid "News"
 msgstr "اخبار"
 
-#: news/templates/news_list.html:14
-msgid "previous"
-msgstr "قبلی"
-
-#: news/templates/news_list.html:18 page/models.py:73
-msgid "Page"
-msgstr "صفحه"
-
-#: news/templates/news_list.html:18
-msgid "of"
-msgstr "از"
-
-#: news/templates/news_list.html:22
-msgid "next"
-msgstr "بعدی"
-
-#: news/templates/news_view.html:7 templates/base.html:12
-msgid " TehPUG "
-msgstr " پاگ تهران "
-
-#: news/templates/news_view.html:19 templates/index.html:134
+#: news/templates/ajax.html:21 news/templates/news_view.html:20
 #: templates/page.html:12
 msgid "On"
 msgstr "در"
 
-#: news/templates/news_view.html:19 templates/index.html:134
+#: news/templates/ajax.html:21 news/templates/news_view.html:20
 #: templates/page.html:12
 msgid "by"
 msgstr "توسط"
+
+#: news/templates/news_list.html:18 templates/index.html:133
+msgid "No More Posts!"
+msgstr "پست دیگری وجود ندارد"
+
+#: news/templates/news_list.html:19 templates/index.html:134
+msgid "Scroll for more or click here"
+msgstr "برای دیدن پست‌های بیشتر اسکرول کنید یا اینجا کلیک کنید"
+
+#: news/templates/news_list.html:20 templates/index.html:135
+msgid "Click for more"
+msgstr "برای دیدن پست‌های بیشتر کلیک کنید"
+
+#: news/templates/news_list.html:21 templates/index.html:136
+msgid "Loading Posts..."
+msgstr "درحال بارگزاری..."
+
+#: news/templates/news_view.html:8 templates/base.html:12
+msgid " TehPUG "
+msgstr " پاگ تهران "
 
 #: page/models.py:40
 msgid "Publish"
@@ -294,6 +290,10 @@ msgstr "وزن"
 #: page/models.py:72 page/templates/nav.html:2
 msgid "Pages"
 msgstr "صفحه‌ها"
+
+#: page/models.py:73
+msgid "Page"
+msgstr "صفحه"
 
 #: page/models.py:97
 msgid "First Pages"
@@ -407,7 +407,7 @@ msgstr "چت آنلاین"
 
 #: templates/base.html:52
 msgid "Mailing list"
-msgstr "لیست پستی"
+msgstr "میلینگ لیست"
 
 #: templates/base.html:85
 msgid "Other Communities"
@@ -481,6 +481,34 @@ msgstr "مجله لینوکس‌مگ"
 #: templates/base.html:116
 msgid "TehPUG in"
 msgstr "پاگ تهران در"
+
+#: templates/base.html:117
+msgid "TehPUG at Github"
+msgstr "پاگ تهران در گیت‌هاب"
+
+#: templates/base.html:118
+msgid "TehPUG at Twitter"
+msgstr "پاگ تهران در تویتر"
+
+#: templates/base.html:119
+msgid "TehPUG at YouTube"
+msgstr "پاگ تهران در یوتیوب"
+
+#: templates/base.html:120
+msgid "TehPUG at Trello"
+msgstr "پاگ تهران در ترلو"
+
+#: templates/base.html:121
+msgid "TehPUG Mailing List"
+msgstr "لیست پستی پاگ تهران"
+
+#: templates/base.html:122
+msgid "TehPUG at Facebook"
+msgstr "پاگ تهران در فیسبوک"
+
+#: templates/base.html:123
+msgid "TehPUG RSS Feed"
+msgstr "فید‌های RSS پاگ تهران"
 
 #: templates/base.html:125
 msgid "Sponsors"
@@ -570,13 +598,21 @@ msgstr "نیما نوروزی"
 msgid "Kava Co."
 msgstr "شرکت کاوا ارتباطات هوشمند"
 
-#: templates/index.html:135
-msgid "Comments"
-msgstr "نظر"
-
 #: templates/social_links.html:4
 msgid "Share it"
 msgstr "به اشتراک بگذارید"
+
+#~ msgid "previous"
+#~ msgstr "قبلی"
+
+#~ msgid "of"
+#~ msgstr "از"
+
+#~ msgid "next"
+#~ msgstr "بعدی"
+
+#~ msgid "Comments"
+#~ msgstr "نظر"
 
 #, fuzzy
 #~ msgid "A KarajLUG project"
@@ -609,9 +645,6 @@ msgstr "به اشتراک بگذارید"
 #~ msgid "Linux Foundation"
 #~ msgstr "بنیاد لینوکس"
 
-#~ msgid "SFD 2011"
-#~ msgstr "روز آزادی نرم‌افزار ۲۰۱۱"
-
 #~ msgid "Full Name"
 #~ msgstr "نام کامل"
 
@@ -626,18 +659,6 @@ msgstr "به اشتراک بگذارید"
 
 #~ msgid "Join"
 #~ msgstr "پیوستن"
-
-#~ msgid "Sameer Rahmani"
-#~ msgstr "سمیر رحمانی"
-
-#~ msgid "+98-935-8180918"
-#~ msgstr "۰۹۳۵۸۱۸۰۹۱۸"
-
-#~ msgid "Behnam Khan Beigi"
-#~ msgstr "بهنام خان‌بیگی"
-
-#~ msgid "+98-936-6452290"
-#~ msgstr "۰۹۳۶۶۴۵۲۲۹۰"
 
 #~ msgid "Follow"
 #~ msgstr "دنبال‌کردن"

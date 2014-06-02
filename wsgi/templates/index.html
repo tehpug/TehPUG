@@ -21,10 +21,10 @@
   <div class="container">
     <div class="row">
       <div id="sitetitle">
-    <h1>
-      <img src="{% static 'img/logo.png' %}" />
-      {% trans "Tehran Python User Group" %}
-    </h1>
+        <h1>
+          <img src="{% static 'img/logo.png' %}" />
+          {% trans "Tehran Python User Group" %}
+        </h1>
       </div>
     </div>
   </div>
@@ -32,20 +32,20 @@
 {% endblock header %}
 
 {% block content %}
-  <div class="row">
-    <div class="span12">
-      <div id="firstpage">
-        <h1>
-          {{ page.title }}
-        </h1>
-        <section id="firstpagecontent">
-          {% autoescape off %}
-          {{ page.content }}
-          {% endautoescape %}
-        </section>
-      </div>
+<div class="row">
+  <div class="span12">
+    <div id="firstpage">
+      <h1>
+        {{ page.title }}
+      </h1>
+      <section id="firstpagecontent">
+        {% autoescape off %}
+        {{ page.content }}
+        {% endautoescape %}
+      </section>
     </div>
   </div>
+</div>
 </div>
 
 <div class="address">
@@ -83,7 +83,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-<div class="row">
+  <div class="row">
     <div class="addrtext pull-{% if lang.bidi %}right{% else %}left{% endif %} span6">
       <h3>{% trans "Workshops" %}</h3>
       <p>
@@ -115,30 +115,10 @@
 </div>
 
 <div class="newslist">
-  <div class="container">
-    <div class="row">
-      {% for news in news_list %}
-      <article>
-        {% include 'social_links.html' with url=news.get_absolute_url title=news.title %}
-        <h2>
-          <a href="{{ news.get_absolute_url }}">
-            {{ news.title }}
-          </a>
-        </h2>
-        <section>
-          {% autoescape off %}
-          {{ news.content | markdown | linebreaks}}
-          {% endautoescape %}
-        </section>
-        <span>
-          <a href="{{ news.get_absolute_url }}#disqus_thread"></a>
-          <a href="{{ news.get_absolute_url }}"><i class="fa fa-comments"></i></a>
-          {% trans "On" %} {{ news.date|format_date:news.lang }} {% trans "by" %} {{ news.user }}
-        </span>
-      </article>
-      {% endfor %}
-    </div>
+  <div class="container" id="content">
   </div>
+</div>
+
 {% endblock %}
 
 {% block extrahead %}
@@ -146,31 +126,41 @@
 
 {% block pagejs %}
 <script type="text/javascript">
-$(function() {
-    $('#slides').slidesjs({
-    height: 450,
-    play: {
-        active: true,
-        auto: true,
-        interval: 6000,
-        swap: true,
-        effect: "fade"
-    },
-    navigation: {
-        active: true,
-        effect: "fade"
-    },
-    pagination: {
-        active: true,
-        effect: "fade"
-    },
-    effect: {
-        fade: {
-        speed: 1000,
-        crossfade: true
-        }
-    }
-    });
-});
+ $(function() {
+   $('#content').scrollPagination({
+     page: 1,
+     count: 5,
+     noMorePosts: "{% trans 'No More Posts!' %}",
+     scrollForMore: "{% trans 'Scroll for more or click here' %}",
+     clickForMore: "{% trans 'Click for more' %}",
+     loading: "{% trans 'Loading Posts...' %}",
+     delay: 500,
+     scroll: false
+   });
+   $('#slides').slidesjs({
+     height: 450,
+     play: {
+       active: true,
+       auto: true,
+       interval: 6000,
+       swap: true,
+       effect: "fade"
+     },
+     navigation: {
+       active: true,
+       effect: "fade"
+     },
+     pagination: {
+       active: true,
+       effect: "fade"
+     },
+     effect: {
+       fade: {
+         speed: 1000,
+         crossfade: true
+       }
+     }
+   });
+ });
 </script>
 {% endblock pagejs %}

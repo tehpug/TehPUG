@@ -1,26 +1,27 @@
 {% extends 'base.html' %}
 {% load i18n %}
+{% load django_markdown %}
+{% load appfilters %}
 
 {% block content %}
-{% for nw in news.object_list %}
-<ul>
-<li><a href="{{ nw.get_absolute_url }}">{{ nw.title }}</a></li>
-</ul>
-{% endfor %}
+<div class="container" id="content">
 
-<div class="pagination">
-  <span class="step-links">
-    {% if news.has_previous %}
-      <a href="?page={{ news.previous_page_number }}">{% trans 'previous' %}</a>
-    {% endif %}
-
-    <span class="current">
-      {% trans 'Page' %} {{ news.number }} {% trans 'of' %} {{ news.paginator.num_pages }}.
-    </span>
-
-    {% if contacts.has_next %}
-      <a href="?page={{ news.next_page_number }}">{% trans 'next' %}</a>
-    {% endif %}
-  </span>
 </div>
+{% endblock %}
+
+{% block pagejs %}
+<script>
+ $(document).ready(function() {
+   $('#content').scrollPagination({
+     page: 1,
+     count: 10,
+     noMorePosts: "{% trans 'No More Posts!' %}",
+     scrollForMore: "{% trans 'Scroll for more or click here' %}",
+     clickForMore: "{% trans 'Click for more' %}",
+     loading: "{% trans 'Loading Posts...' %}",
+     delay: 500,
+     scroll: true
+   });
+ });
+</script>
 {% endblock %}

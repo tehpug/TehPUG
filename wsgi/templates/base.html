@@ -114,13 +114,13 @@
           <div class="span4 vspan4">
             <div class="center span4" id="follow">
               <h3 class="ftitle">{% trans 'TehPUG in' %}:</h3>
-              <a href="https://github.com/tehpug" title="TehPUG at Github"><i class="fa fa-github fa-3x"></i></a>
-              <a href="https://www.twitter.com/TehPUG" title="TehPUG at Twitter"><i class="fa fa-twitter fa-3x"></i></a>
-              <a href="https://www.youtube.com/channel/UCvqrqROjFUFccIWh1cKQ8IA" title="TehPUG at YouTube"><i class="fa fa-youtube fa-3x"></i></a>
-              <a href="https://trello.com/b/B4ZUJzZH/tehpug" title="TehPUG at Trello"><i class="fa fa-trello fa-3x"></i></a>
-              <a href="mailto:tehpug@python.org" title="TehPUG Mailing List"><i class="fa fa-envelope fa-3x"></i></a>
-              <a href="http://www.facebook.com/tehpug" title="TehPUG at Facebook"><i class="fa fa-facebook-square fa-3x"></i></a>
-              <a href="/news/feed/" title="TehPUG RSS Feed"><i class="fa fa-rss fa-3x"></i></a>
+              <a href="https://github.com/tehpug" title="{% trans 'TehPUG at Github' %}"><i class="fa fa-github fa-3x"></i></a>
+              <a href="https://www.twitter.com/TehPUG" title="{% trans 'TehPUG at Twitter' %}"><i class="fa fa-twitter fa-3x"></i></a>
+              <a href="https://www.youtube.com/channel/UCvqrqROjFUFccIWh1cKQ8IA" title="{% trans 'TehPUG at YouTube' %}"><i class="fa fa-youtube fa-3x"></i></a>
+              <a href="https://trello.com/b/B4ZUJzZH/tehpug" title="{% trans 'TehPUG at Trello' %}"><i class="fa fa-trello fa-3x"></i></a>
+              <a href="mailto:tehpug@python.org" title="{% trans 'TehPUG Mailing List' %}"><i class="fa fa-envelope fa-3x"></i></a>
+              <a href="http://www.facebook.com/tehpug" title="{% trans 'TehPUG at Facebook' %}"><i class="fa fa-facebook-square fa-3x"></i></a>
+              <a href="/news/feed/" title="{% trans 'TehPUG RSS Feed' %}"><i class="fa fa-rss fa-3x"></i></a>
               <br/><br/><br/>
               <h3>{% trans 'Sponsors' %} :</h3>
               <a href="http://kavatelecom.com" class="center"><img src="{% static 'img/kava.png' %}"></a>
@@ -137,6 +137,7 @@
     {% endblock %}
     <script src="{% static 'js/jquery-1.9.1.min.js' %}"></script>
     <script src="{% static 'js/jquery.slides.min.js' %}"></script>
+    <script src="{% static 'js/scroll-paginate.js' %}"></script>
     {% block tail %}
 
     {% if lang.bidi %}

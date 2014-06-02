@@ -19,27 +19,13 @@
 
 from django.shortcuts import render_to_response as rr
 from django.template import RequestContext
-from django.conf import settings
-from django.utils import translation
-
-from news.models import News
-from page.models import FirstPage
 
 
 def index(request):
     """
     index view of karajlug.org
     """
-    lang = translation.get_language()
-    news = News.objects.filter(lang=lang).order_by("-date")[:settings.NEWS_LIMIT]
-    try:
-        page = FirstPage.objects.filter(lang=lang).latest("date")
-    except FirstPage.DoesNotExist:
-        page = None
-    return rr("index.html",
-              {"news_list": news,
-               "page": page,
-               },
+    return rr("index.html", {},
               context_instance=RequestContext(request))
 
 

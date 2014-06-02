@@ -238,13 +238,12 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 BOOK_IN_PAGE = 5
-NEWS_LIMIT = 10
 VERSION = "0.48.19"
 AUTH_PROFILE_MODULE = 'members.Member'
 
 APPEND_SLASH = True
 LOCALE_PATHS = (
-    os.path.join(PROJECT_DIR, "../conf/locale"),
+    os.path.join(PROJECT_DIR, "../locale"),
 )
 
 ALLOWED_HOSTS = (

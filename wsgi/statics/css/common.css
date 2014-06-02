@@ -268,7 +268,38 @@ section p {
    text-decoration: initial;
 }
 
+.loading-bar {
+   padding: 20px;
+   display: block;
+   text-align: center;
+   border-radius: 5px;
+   margin: 20px 0;
+   font-size: 1.2em;
+   border: 1px dotted rgba(0, 0, 0, 0.49);
+   cursor: pointer;
+   position: relative;
+   background-color: rgba(168, 190, 248, 0.55);
+}
 
+.loading-bar:hover {
+   box-shadow: inset 0px 45px 30px -40px rgba(0, 0, 0, 0.05);
+}
+
+#travel {
+   padding: 10px;
+   background: rgba(0,0,0,0.6);
+   border-bottom: 2px solid rgba(0,0,0,0.2);
+   font-variant: normal;
+   text-decoration: none;
+}
+
+#travel a {
+   font-family: 'Georgia', serif;
+   text-decoration: none;
+   border-bottom: 1px solid #f9f9f9;
+   color: #f9f9f9;
+   font-size: 1.5em;
+}
 
 
 /* SlidesJS Optional: If you'd like to use this design */
@@ -287,17 +318,17 @@ section p {
 a.slidesjs-next,
    a.slidesjs-previous,
       a.slidesjs-play,
-     a.slidesjs-stop {
-        background-image: url(/static/img/btns-next-prev.png);
-        background-repeat: no-repeat;
-        display:block;
-        width:12px;
-        height:18px;
-        overflow: hidden;
-        text-indent: -9999px;
-        float: left;
-        margin-right:5px;
-     }
+         a.slidesjs-stop {
+            background-image: url(/static/img/btns-next-prev.png);
+            background-repeat: no-repeat;
+            display:block;
+            width:12px;
+            height:18px;
+            overflow: hidden;
+            text-indent: -9999px;
+            float: left;
+            margin-right:5px;
+         }
 
 a.slidesjs-next {
    margin-right:10px;
@@ -358,7 +389,7 @@ a:hover.slidesjs-stop {
 
 .slidesjs-pagination li a.active,
       .slidesjs-pagination li a:hover.active {
-     background-position: 0 -13px
+         background-position: 0 -13px
       }
 
 .slidesjs-pagination li a:hover {
@@ -367,13 +398,13 @@ a:hover.slidesjs-stop {
 
 #slides a:link,
       #slides a:visited {
-     color: #333
+         color: #333
       }
 
 #slides a:hover,
-        #slides a:active {
-           color: #9e2020
-        }
+            #slides a:active {
+               color: #9e2020
+            }
 
 .navbar {
    overflow: hidden

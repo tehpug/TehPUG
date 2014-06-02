@@ -27,4 +27,5 @@ urlpatterns = patterns(
     (r'^feed/$', LatestNews()),
     (r'^(\d+)/$', 'news.views.news_entry'),
     (r'^$', 'news.views.index'),
+    (r'^ajax/$', 'news.views.ajax'),
 )
