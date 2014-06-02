@@ -7,9 +7,9 @@
   <div class="container">
     <div class="row">
       <div id="slides">
-        <img src="{% static 'img/slide-1.jpg' %}"/>
-        <img src="{% static 'img/slide-2.jpg' %}"/>
-        <img src="{% static 'img/slide-3.jpg' %}"/>
+        <img alt="slide-1" src="{% static 'img/slide-1.jpg' %}"/>
+        <img alt="slide-2" src="{% static 'img/slide-2.jpg' %}"/>
+        <img alt+"slide-3" src="{% static 'img/slide-3.jpg' %}"/>
       </div>
     </div>
   </div>
@@ -20,7 +20,7 @@
     <div class="row">
       <div id="sitetitle">
     <h1>
-      <img src="{% static 'img/logo.png' %}" />
+      <img alt="Python-logo" src="{% static 'img/logo.png' %}" />
       {% trans "Tehran Python User Group" %}
     </h1>
       </div>
@@ -85,13 +85,13 @@
     <div class="row">
       {% for news in news_list %}
       <article>
-        {% include 'social_links.html' with url=news.get_absolute_url title=news.title %}
-        <h2>
+        <section>
+          {% include 'social_links.html' with url=news.get_absolute_url title=news.title %}
+          <h2>
           <a href="{{ news.get_absolute_url }}">
             {{ news.title }}
           </a>
-        </h2>
-        <section>
+          </h2>
           {% autoescape off %}
           {{ news.content|linebreaks }}
           {% endautoescape %}
