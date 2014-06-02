@@ -27,7 +27,7 @@ from page.models import FirstPage
 
 def index(request):
     """
-    index view of tehpug.org
+    index view of tehpug.ir
     """
     news = News.objects.all().order_by("-date")[:settings.NEWS_LIMIT]
     try:

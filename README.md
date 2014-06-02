@@ -1,5 +1,4 @@
-
-tehpug
+TehPUG
 ------------------------------
 Contents
 ==============================
@@ -40,4 +39,3 @@ language) release under the term of GPL v2.
 karajlug use some applications and library in its code that mentioned below:
 
 Django - Release under BSD license ( external )
-

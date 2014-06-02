@@ -26,7 +26,7 @@ from .models import News
 class LatestNews(Feed):
     title = "Latest tehpug news."
     link = "/news/"
-    description = "What happend in tehpug?"
+    description = "What happend in TehPUG?"
 
     def items(self):
         return News.objects.order_by('-date')[:settings.NEWS_LIMIT]

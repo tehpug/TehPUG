@@ -81,7 +81,7 @@ class Project(models.Model):
         help_text=_("Projects will appear in menu respect to this value"))
 
     kproject = models.BooleanField(default=False,
-                                   verbose_name=_("tehpug Project"))
+                                   verbose_name=_("TehPUG Project"))
     desc = models.TextField(verbose_name=_("Description"),
                             blank=True, null=True)
 

@@ -1,7 +1,7 @@
 # coding: utf-8
 # -----------------------------------------------------------------------------
 #    karajlug.org
-#    Copyright (C) 2010-2013  tehpug community
+#    Copyright (C) 2010-2013  karajlug community
 #
 #    This program is free software; you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -62,5 +62,5 @@ def quote(url):
 
 
 def full_path(absolute_url):
-    site = getattr(settings, "URL", "www.tehpug.ir")
+    site = getattr(settings, "URL", "tehpug.ir")
     return "http://%s%s" % (site, absolute_url)

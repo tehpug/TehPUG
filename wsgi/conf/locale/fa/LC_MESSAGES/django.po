@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-01 01:08+0430\n"
+"POT-Creation-Date: 2014-06-02 22:48+0430\n"
 "PO-Revision-Date: 2013-12-09 23:05+0430\n"
 "Last-Translator: Behnam Ahmad Khan Beigi <b3hnam@gnu.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -151,14 +151,6 @@ msgstr "تاریخ و زمان"
 msgid "FAQ"
 msgstr "سؤال‌های متداول"
 
-#: tehpug/settings.py:88 templates/base.html:61
-msgid "Persian"
-msgstr "فارسی"
-
-#: tehpug/settings.py:89 templates/base.html:59
-msgid "English"
-msgstr "انگلیسی"
-
 #: mediacenter/models.py:30
 msgid "File"
 msgstr "پرونده"
@@ -266,7 +258,7 @@ msgid "next"
 msgstr "بعدی"
 
 #: news/templates/news_view.html:7 templates/base.html:12
-msgid " tehpug "
+msgid " TehPUG "
 msgstr " پاگ تهران "
 
 #: news/templates/news_view.html:19 templates/index.html:100
@@ -304,7 +296,7 @@ msgid "First Page"
 msgstr "صفحهٔ اول"
 
 #: page/views.py:41 templates/base.html:44
-msgid "tehpug"
+msgid "TehPUG"
 msgstr "پاگ تهران"
 
 #: projects/models.py:46
@@ -330,7 +322,7 @@ msgstr "نمایش پروژه بر اساس این مقدار در منو نما
 
 #: projects/models.py:84
 #, fuzzy
-msgid "tehpug Project"
+msgid "TehPUG Project"
 msgstr "پروژه‌ پاگ تهران"
 
 #: projects/models.py:120 projects/models.py:129
@@ -365,7 +357,7 @@ msgstr "نگه‌دار"
 #: projects/templates/project_view.html:24 projects/templates/projects.html:24
 #: projects/templates/projects.html:44
 #, fuzzy
-msgid "A tehpug project"
+msgid "A TehPUG project"
 msgstr "پروژه‌ پاگ تهران"
 
 #: projects/templates/project_view.html:26 projects/templates/projects.html:26
@@ -384,6 +376,14 @@ msgstr "بارگیری"
 #: projects/templates/project_view.html:47
 msgid "Repositories"
 msgstr "مخازن"
+
+#: tehpug/settings.py:88 templates/base.html:61
+msgid "Persian"
+msgstr "فارسی"
+
+#: tehpug/settings.py:89 templates/base.html:59
+msgid "English"
+msgstr "انگلیسی"
 
 #: templates/404.html:4
 msgid "Page not found!"
@@ -475,11 +475,11 @@ msgid "PySocial"
 msgstr "اجتماع پایتونی‌ها"
 
 #: templates/base.html:110
-msgid "salam donya"
+msgid "Salam Donya"
 msgstr "مجله سلام دنیا"
 
 #: templates/base.html:116
-msgid "tehpug in"
+msgid "TehPUG in"
 msgstr "پاگ تهران در"
 
 #: templates/base.html:122
@@ -487,11 +487,11 @@ msgid "Sponsors"
 msgstr "حامیان"
 
 #: templates/base.html:127
-msgid "Copyright 2013-2014 tehpug Community"
+msgid "Copyright 2013-2014 TehPUG Community"
 msgstr "کپی‌رایت ۲۰۱۳−۲۰۱۴ اجتماع پاگ تهران"
 
 #: templates/contact.html:10
-msgid "Stay in touch with tehpug"
+msgid "Stay in touch with TehPUG"
 msgstr "با پاگ تهران در تماس باشید"
 
 #: templates/contact.html:13
@@ -549,81 +549,3 @@ msgstr "در یک نقشهٔ بزرگ"
 #: templates/social_links.html:4
 msgid "Share it"
 msgstr "به اشتراک بگذارید"
-
-#, fuzzy
-#~ msgid "A tehpug project"
-#~ msgstr "یک پروژه از پاگ تهران"
-
-#, fuzzy
-#~ msgid "tehpug Project"
-#~ msgstr "پروژه‌های پاگ تهران"
-
-#, fuzzy
-#~ msgid "tehpug"
-#~ msgstr "کرج لاگ"
-
-#, fuzzy
-#~ msgid " tehpug "
-#~ msgstr "کرج لاگ"
-
-#~ msgid "Events"
-#~ msgstr "رویدادها"
-
-#~ msgid "Other Lugs"
-#~ msgstr "لاگ‌های دیگر"
-
-#~ msgid "What is LUG?"
-#~ msgstr "لاگ چیست؟"
-
-#~ msgid "Free Software Foundation"
-#~ msgstr "بنیاد نرم‌افزار‌های آزاد"
-
-#~ msgid "Linux Foundation"
-#~ msgstr "بنیاد لینوکس"
-
-#~ msgid "SFD 2011"
-#~ msgstr "روز آزادی نرم‌افزار ۲۰۱۱"
-
-#~ msgid ""
-#~ "tehpugers celeberate Software freedom day along side with the world for "
-#~ "the second year in 2011"
-#~ msgstr ""
-#~ "کرج‌لاگی‌ها جشن روز آزادی نرم‌افزار را برای دومین بار در سال ۲۰۱۱ به‌همراه "
-#~ "سایر جهانیان جشن گرفتند."
-
-#~ msgid ""
-#~ "Karaj Linux User Group is a community that is active on GNU/Linux and "
-#~ "Free Software fields."
-#~ msgstr ""
-#~ "کرج‌لاگ یا گروه کاربران لینوکس کرج اجتماعی است که در زمینهٔ گنو/لینوکس و "
-#~ "نرم‌افزارهای آزاد فعال است. "
-
-#~ msgid "Full Name"
-#~ msgstr "نام کامل"
-
-#~ msgid "Email"
-#~ msgstr "رایانامه"
-
-#~ msgid "Password"
-#~ msgstr "گذرواژه"
-
-#~ msgid "Confirm password"
-#~ msgstr "تأیید گذرواژه"
-
-#~ msgid "Join"
-#~ msgstr "پیوستن"
-
-#~ msgid "Sameer Rahmani"
-#~ msgstr "سمیر رحمانی"
-
-#~ msgid "+98-935-8180918"
-#~ msgstr "۰۹۳۵۸۱۸۰۹۱۸"
-
-#~ msgid "Behnam Khan Beigi"
-#~ msgstr "بهنام خان‌بیگی"
-
-#~ msgid "+98-936-6452290"
-#~ msgstr "۰۹۳۶۶۴۵۲۲۹۰"
-
-#~ msgid "Follow"
-#~ msgstr "دنبال‌کردن"
