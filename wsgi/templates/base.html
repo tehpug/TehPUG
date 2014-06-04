@@ -3,7 +3,7 @@
 {% load page_nav %}
 {% load staticfiles %}
 {% get_language_info for LANGUAGE_CODE as lang %}
-<html lang="{{ lang.code }}">
+<html lang="{{ lang.code }}" xmlns:og="http://ogp.me/ns#">
   <head>
     <meta charset="UTF-8">
 
@@ -13,10 +13,18 @@
       {% endblock %}
     </title>
 
-    <meta name="description" content="TehPUG - Tehran Python users group">
+    <meta property="og:title" content="{% trans 'Tehran Python User Group' %}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://tehpug.ir" />
+    <meta property="og:description" content="{% trans 'A group of python users in Tehran' %}" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:site_name" content="{% trans 'TehPUG' %}" />
+    <meta property="og:image" content="{% static 'img/slide-2.jpg' %}" />
+
+    <meta name="description" content="TehPUG - Tehran Python Users Group">
     <meta name="author" content="Sameer Rahmani - Behnam Ahmad Khan Beigi - Keyvan Hedayati - Mehdy Khoshnoody">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 
     <link rel="shortcut icon" href="{% static 'favicon.png' %}">
 
@@ -31,6 +39,16 @@
     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/common.css' %}">
 
+    <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+     ga('create', 'UA-51361718-1', 'tehpug.ir');
+     ga('send', 'pageview');
+
+    </script>
     {% block extrahead %}
     {% endblock %}
   </head>
@@ -48,8 +66,8 @@
                 <li><a href="https://github.com/tehpug">{% trans "Projects" %}</a></li>
                 <li><a href="/contact/">{% trans "Contact" %}</a></li>
                 <li><a href="/faq/">{% trans "FAQ" %}</a></li>
-                <li><a href="http://webchat.freenode.net/?channels=python-ir&uio=d4" target="_blank">{% trans "WebChat" %}</a></li>
-                <li><a href="https://mail.python.org/mailman/listinfo/tehpug">{% trans "Mailing list" %}</a></li>
+                <li><a href="http://webchat.freenode.net/?channels=python-ir&amp;uio=d4" target="_blank">{% trans "WebChat" %}</a></li>
+                <li><a href="https://mail.python.org/mailman/listinfo/tehpug" target="_blank">{% trans "Mailing list" %}</a></li>
                 <!--<li><a href="/faq/">{% trans "FAQ" %}</a></li>-->
               </ul>
 
@@ -84,19 +102,17 @@
             <div class="center span3">
               <h3 class="ftitle">{% trans 'Other Communities' %}:</h3>
               <ul class="other">
-                <li><a href="http://tehlug.org/">{% trans 'Tehran Lug' %}</a></li>
-                <li><a href="http://karajlug.org/">{% trans 'Karaj Lug' %}</a></li>
-                <li><a href="http://www.isfahanlug.org/">{% trans 'Isfahan Lug' %}</a></li>
-                <li><a href="http://www.zanjanlug.org/">{% trans 'Zanjan Lug' %}</a></li>
-                <li><a href="http://www.mashhadlug.org/">{% trans 'Mashhad Lug' %}</a></li>
-                <li><a href="http://www.gullug.org/">{% trans 'Guilan Lug' %}</a></li>
-                <li><a href="http://khuzestanlug.ir/">{% trans 'Khuzestan Lug' %}</a></li>
-                <li><a href="http://tabrix.org">{% trans 'Tabriz Lug' %}</a></li>
-                <li><a href="http://klug.ir">{% trans 'Kerman Lug' %}</a></li>
-                <li><a href="http://www.yazdlug.com/">{% trans 'Yazd Lug' %}</a></li>
-                <li><a href="http://bulug.ir/">{% trans 'Bushehr Lug' %}</a></li>
-
-
+                <li><a href="http://tehlug.org/" target="_blank">{% trans 'Tehran Lug' %}</a></li>
+                <li><a href="http://karajlug.org/" target="_blank">{% trans 'Karaj Lug' %}</a></li>
+                <li><a href="http://www.isfahanlug.org/" target="_blank">{% trans 'Isfahan Lug' %}</a></li>
+                <li><a href="http://www.zanjanlug.org/" target="_blank">{% trans 'Zanjan Lug' %}</a></li>
+                <li><a href="http://www.mashhadlug.org/" target="_blank">{% trans 'Mashhad Lug' %}</a></li>
+                <li><a href="http://www.gullug.org/" target="_blank">{% trans 'Guilan Lug' %}</a></li>
+                <li><a href="http://khuzestanlug.ir/" target="_blank">{% trans 'Khuzestan Lug' %}</a></li>
+                <li><a href="http://tabrix.org" target="_blank">{% trans 'Tabriz Lug' %}</a></li>
+                <li><a href="http://klug.ir" target="_blank">{% trans 'Kerman Lug' %}</a></li>
+                <li><a href="http://www.yazdlug.com/" target="_blank">{% trans 'Yazd Lug' %}</a></li>
+                <li><a href="http://bulug.ir/" target="_blank">{% trans 'Bushehr Lug' %}</a></li>
               </ul>
             </div>
           </div>
@@ -105,34 +121,35 @@
               <h3 class="ftitle">{% trans 'Useful links' %}:</h3>
               <ul>
                 <!-- <li><a href="http://fa.wikipedia.org/wiki/%DA%AF%D8%B1%D9%88%D9%87_%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%D8%A7%D9%86_%D9%84%DB%8C%D9%86%D9%88%DA%A9%D8%B3_%DA%A9%D8%B1%D8%AC">{% trans "TehPUG on Wikipedia" %}</a></li> -->
-                <li><a href="http://tehpug.github.io/python-the-right-way/">{% trans "Python The Right Way" %}</a></li>
-                <li><a href="http://pysocial.com/">{% trans "PySocial" %}</a></li>
-                <li><a href="http://salam-donya.ir/">{% trans 'Salam Donya Mag' %}</a></li>
+                <li><a href="http://tehpug.github.io/python-the-right-way/" target="_blank">{% trans "Python The Right Way" %}</a></li>
+                <li><a href="http://pysocial.com/" target="_blank">{% trans "PySocial" %}</a></li>
+                <li><a href="http://salam-donya.ir/" target="_blank">{% trans 'Salam Donya Mag' %}</a></li>
               </ul>
             </div>
           </div>
           <div class="span4 vspan4">
             <div class="center span4" id="follow">
               <h3 class="ftitle">{% trans 'TehPUG in' %}:</h3>
-              <a href="https://github.com/tehpug" title="{% trans 'TehPUG at Github' %}"><i class="fa fa-github fa-3x"></i></a>
-              <a href="https://www.twitter.com/TehPUG" title="{% trans 'TehPUG at Twitter' %}"><i class="fa fa-twitter fa-3x"></i></a>
-              <a href="https://www.youtube.com/channel/UCvqrqROjFUFccIWh1cKQ8IA" title="{% trans 'TehPUG at YouTube' %}"><i class="fa fa-youtube fa-3x"></i></a>
-              <a href="https://trello.com/b/B4ZUJzZH/tehpug" title="{% trans 'TehPUG at Trello' %}"><i class="fa fa-trello fa-3x"></i></a>
-              <a href="mailto:tehpug@python.org" title="{% trans 'TehPUG Mailing List' %}"><i class="fa fa-envelope fa-3x"></i></a>
-              <a href="http://www.facebook.com/tehpug" title="{% trans 'TehPUG at Facebook' %}"><i class="fa fa-facebook-square fa-3x"></i></a>
+              <a href="https://github.com/tehpug" title="{% trans 'TehPUG at Github' %}" target="_blank"><i class="fa fa-github fa-3x"></i></a>
+              <a href="https://www.twitter.com/TehPUG" title="{% trans 'TehPUG at Twitter' %}" target="_blank"><i class="fa fa-twitter fa-3x"></i></a>
+              <a href="https://www.youtube.com/channel/UCvqrqROjFUFccIWh1cKQ8IA" title="{% trans 'TehPUG at YouTube' %}" target="_blank"><i class="fa fa-youtube fa-3x"></i></a>
+              <a href="https://trello.com/b/B4ZUJzZH/tehpug" title="{% trans 'TehPUG at Trello' %}" target="_blank"><i class="fa fa-trello fa-3x"></i></a>
+              <a href="mailto:tehpug@python.org" title="{% trans 'TehPUG Mailing List' %}" target="_blank"><i class="fa fa-envelope fa-3x"></i></a>
+              <a href="http://www.facebook.com/tehpug" title="{% trans 'TehPUG at Facebook' %}" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a>
               <a href="/news/feed/" title="{% trans 'TehPUG RSS Feed' %}"><i class="fa fa-rss fa-3x"></i></a>
               <br/><br/><br/>
               <h3>{% trans 'Sponsors' %} :</h3>
-              <a href="http://kavatelecom.com" class="center"><img src="{% static 'img/kava.png' %}"></a>
-              <a href="http://tosan.com" class="center"><img src="{% static 'img/tosan.gif' %}"></a>
+              <a href="http://kavatelecom.com" class="center" target="_blank"><img alt="kava" src="{% static 'img/kava.png' %}"></a>
+              <a href="http://tosan.com" class="center" target="_blank"><img alt="tosan" src="{% static 'img/tosan.gif' %}"></a>
             </div>
           </div>
           <div class="row">
             <div class="span12">
-              <p align="center"  class="small">©{% trans "Copyright 2013-2014 TehPUG Community" %}.</p>
+              <p class="small">©{% trans "Copyright 2013-2014 TehPUG Community" %}</p>
             </div>
           </div>
         </div>
+      </div>
     </footer>
     {% endblock %}
     <script src="{% static 'js/jquery-1.9.1.min.js' %}"></script>
@@ -148,26 +165,16 @@
     {% endif %}
 
     {% endblock tail %}
-    <script>
-     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-     ga('create', 'UA-51361718-1', 'tehpug.ir');
-     ga('send', 'pageview');
+    <script type="text/javascript">
+     var disqus_shortname = 'tehpug';
 
-    </script>
-
-     <script type="text/javascript">
-    var disqus_shortname = 'tehpug';
-
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
+     (function () {
+       var s = document.createElement('script'); s.async = true;
+       s.type = 'text/javascript';
+       s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+       (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+     }());
     </script>
 
     {% block pagejs %}

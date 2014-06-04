@@ -21,10 +21,10 @@
   <div class="container">
     <div class="row">
       <div id="sitetitle">
-    <h1>
-      <img alt="Python-Logo" src="{% static 'img/logo.png' %}" />
-      {% trans "Tehran Python User Group" %}
-    </h1>
+        <h1>
+          <img alt="Python-Logo" src="{% static 'img/logo.png' %}" />
+          {% trans "Tehran Python User Group" %}
+        </h1>
       </div>
     </div>
   </div>
@@ -68,14 +68,14 @@
         {% trans "Keyvan Hedayati" %} : {% trans "+98-936-8347120" %}<br/>
       </p>
     </div>
-    <div class="pull-{% if lang.bidi %}left{% else %}right{% endif %} span6" class="map">
+    <div class="pull-{% if lang.bidi %}left{% else %}right{% endif %} span6">
       <a href="http://goo.gl/V1Qoz0" target="_blank" title="{% trans "View" %} {% trans "Tosan Co." %} {% trans "in a larger map" %}">
         <img src="{% static 'img/sessionmap.jpg' %}" class="img-rounded" alt="TehPUG on map" />
       </a>
       <br />
       <p class="small">
         {% trans "View" %}
-        <a href="http://goo.gl/V1Qoz0">
+        <a href="http://goo.gl/V1Qoz0" target="_blank">
           {% trans "Tosan Co." %}
         </a>
         {% trans "in a larger map" %}
@@ -94,17 +94,17 @@
         {% trans "More Information" %}:
       </p>
       <p class="left pull-{% if lang.bidi %}left{% else %}right{% endif %}">
-        {% trans "Nima Norozi" %} : <a href="mailto:nim4n@yahoo.com">nim4n@yahoo.com</a><br/>
+        {% trans "Nima Norozi" %} : <a href="mailto:nim4n@yahoo.com" target="_blank">nim4n@yahoo.com</a><br/>
       </p>
     </div>
-    <div class="pull-{% if lang.bidi %}left{% else %}right{% endif %} span6" class="map">
+    <div class="pull-{% if lang.bidi %}left{% else %}right{% endif %} span6">
       <a href="http://goo.gl/maps/M18qe" target="_blank" title="{% trans "View" %} {% trans "Kava Co." %} {% trans "in a larger map" %}">
         <img src="{% static 'img/workshopmap.jpg' %}" class="img-rounded" alt="TehPUG on map" />
       </a>
       <br />
       <p class="small">
         {% trans "View" %}
-        <a href="http://goo.gl/maps/M18qe">
+        <a href="http://goo.gl/maps/M18qe" target="_blank">
           {% trans "Kava Co." %}
         </a>
         {% trans "in a larger map" %}
