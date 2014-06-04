@@ -23,10 +23,14 @@ from django.conf.urls import *
 from django.contrib import admin
 from django.conf import settings
 
+from sitemap import sitemaps
+
 admin.autodiscover()
 
 urlpatterns = patterns(
     '',
+    (r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
+    (r'^admin/', include(admin.site.urls)),
     (r'^faq/$', "faq.views.index"),
     (r'^news/', include('news.urls')),
     (r'^page/', include('page.urls')),
@@ -42,7 +46,6 @@ urlpatterns = patterns(
     (r'^list/$', 'tehpug.views.list'),
     (r'^youtube/$', 'tehpug.views.youtube'),
     (r'^irc/$', 'tehpug.views.irc'),
-    (r'^admin/', include(admin.site.urls)),
 )
 
 # Local media serving.

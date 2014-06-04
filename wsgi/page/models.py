@@ -93,6 +93,9 @@ class FirstPage(models.Model):
     def __unicode__(self):
         return self.title
 
+    def get_absolute_url(self):
+        return "/%s/#firstpage" % self.lang
+
     class Meta:
         verbose_name_plural = _("First Pages")
         verbose_name = _('First Page')

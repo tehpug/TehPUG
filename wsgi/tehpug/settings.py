@@ -88,7 +88,7 @@ LANGUAGES = [
     ["en", _("English")],
 ]
 
-SITE_ID = 1
+SITE_ID = 2
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
@@ -186,6 +186,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
+    'django.contrib.sitemaps',
     'django_markdown',
     "page",
     "news",

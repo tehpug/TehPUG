@@ -43,6 +43,9 @@ class FAQ(models.Model):
     def __unicode__(self):
         return self.question
 
+    def get_absolute_url(self):
+        return "/%s/faq#%s" % (self.lang, self.id)
+
     class Meta:
         verbose_name_plural = _("FAQ")
         verbose_name = _('Question')
