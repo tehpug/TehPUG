@@ -188,6 +188,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.sitemaps',
     'django_markdown',
+    'south',
     "page",
     "news",
     "faq",
