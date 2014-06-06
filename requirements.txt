@@ -2,10 +2,14 @@ Django==1.5.7
 Markdown==2.4
 Pillow==2.4.0
 South==0.8.4
+boto==2.29.1
 django-crispy-forms==1.4.0
+django-dbbackup==1.80.2
 django-debug-toolbar==1.2
 django-markdown==0.5.4
 django-reversion==1.8.0
+dropbox==1.6
 psycopg2==2.5.2
 sqlparse==0.1.11
+urllib3==1.8.2
 wsgiref==0.1.2

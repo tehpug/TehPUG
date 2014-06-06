@@ -4,5 +4,7 @@ env/
 env3/
 statics/uploads/*
 deployment
-sqlite3.db
 tmp/*
+secrets.py
+sqlite3.db
+tokens

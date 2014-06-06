@@ -18,6 +18,7 @@
 # -----------------------------------------------------------------------------
 import imp
 import os
+import sys
 
 ON_OPENSHIFT = False
 if 'OPENSHIFT_REPO_DIR' in os.environ:
@@ -60,12 +61,6 @@ else:
             'PORT': '',
         }
     }
-
-try:
-    import tehpug_secret as ks
-    DATABASES = ks.DATABASES
-except ImportError:
-    pass
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -151,6 +146,17 @@ if ON_OPENSHIFT:
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = use_keys['SECRET_KEY']
 
+DBBACKUP_STORAGE = 'dbbackup.storage.dropbox_storage'
+if ON_OPENSHIFT:
+    DBBACKUP_TOKENS_FILEPATH = os.path.join(os.environ.get('OPENSHIFT_DATA_DIR', ''), 'tokens')
+    sys.path.insert(0, os.environ.get('OPENSHIFT_DATA_DIR', ''))
+    DBBACKUP_SERVER_NAME = 'production'
+else:
+    DBBACKUP_TOKENS_FILEPATH = os.path.join(PROJECT_DIR, 'tokens')
+    DBBACKUP_SERVER_NAME = 'develop'
+
+from secrets import DBBACKUP_DROPBOX_APP_KEY, DBBACKUP_DROPBOX_APP_SECRET
+
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
@@ -189,6 +195,7 @@ INSTALLED_APPS = (
     'django.contrib.sitemaps',
     'django_markdown',
     'south',
+    'dbbackup',
     "page",
     "news",
     "faq",
@@ -255,4 +262,5 @@ ALLOWED_HOSTS = (
     "www.tehpug.ir",
     "tehpug.ir",
     "127.0.0.1",
+    'django-dbbackup'
 )

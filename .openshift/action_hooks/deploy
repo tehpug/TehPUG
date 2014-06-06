@@ -12,3 +12,6 @@ python "$OPENSHIFT_REPO_DIR".openshift/action_hooks/secure_db.py | tee -a ${OPEN
 
 echo "Executing 'python $OPENSHIFT_REPO_DIR/wsgi/manage.py collectstatic --noinput'"
 python "$OPENSHIFT_REPO_DIR"wsgi/manage.py collectstatic --noinput > /dev/null
+
+echo "Executing 'chmod +x $OPENSHIFT_REPO_DIR/.openshift/cron/daily/dbbackup.sh'"
+chmod +x "$OPENSHIFT_REPO_DIR".openshift/cron/daily/dbbackup.sh
