@@ -52,11 +52,11 @@ if ON_OPENSHIFT:
     }
 else:
     DATABASES = {
-        'default': {
+        'sqlite': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': os.path.join(PROJECT_DIR, 'sqlite3.db'),
         },
-        'postgres': {
+        'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'tehpug',
             'USER': 'postgres',
@@ -204,11 +204,7 @@ INSTALLED_APPS = (
     "page",
     "news",
     "faq",
-    "members",
-    "books",
     "projects",
-    "dbot",
-    "mediacenter",
     "viewhelper",
 )
 
