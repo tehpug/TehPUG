@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-04 13:51+0430\n"
+"POT-Creation-Date: 2014-06-19 08:33+0430\n"
 "PO-Revision-Date: 2013-12-09 23:05+0430\n"
 "Last-Translator: Behnam Ahmad Khan Beigi <b3hnam@gnu.org>\n"
 "Language: fa\n"
@@ -15,6 +15,7 @@ msgstr ""
 
 #: books/models.py:37 faq/models.py:36 members/models.py:127 news/models.py:35
 #: page/models.py:44 page/models.py:86 projects/models.py:42
+#: tehpug/base_model.py:12
 msgid "Language"
 msgstr "زبان"
 
@@ -90,7 +91,7 @@ msgstr "خالق هنر"
 msgid "Book"
 msgstr "کتاب"
 
-#: books/models.py:118 templates/base.html:55
+#: books/models.py:118 templates/base.html:65
 msgid "Books"
 msgstr "کتاب‌ها"
 
@@ -129,7 +130,7 @@ msgstr "صفحهٔ خانگی"
 msgid "User"
 msgstr "کاربر"
 
-#: faq/models.py:33 faq/models.py:48
+#: faq/models.py:33 faq/models.py:51
 msgid "Question"
 msgstr "سؤال"
 
@@ -142,7 +143,7 @@ msgstr "جواب"
 msgid "Date and Time"
 msgstr "تاریخ و زمان"
 
-#: faq/models.py:47 templates/base.html:58 templates/base.html.py:61
+#: faq/models.py:50 templates/base.html:68 templates/base.html.py:72
 #: templates/faq.html:6
 msgid "FAQ"
 msgstr "سؤال‌های متداول"
@@ -188,7 +189,7 @@ msgstr "این فیلد احمیتی ندارد"
 msgid "Member"
 msgstr "عضو"
 
-#: members/models.py:108 templates/base.html:54
+#: members/models.py:108 templates/base.html:64
 msgid "Members"
 msgstr "اعضا"
 
@@ -287,15 +288,15 @@ msgstr "صفحه‌ها"
 msgid "Page"
 msgstr "صفحه"
 
-#: page/models.py:97
+#: page/models.py:100
 msgid "First Pages"
 msgstr "صفحات اول"
 
-#: page/models.py:98
+#: page/models.py:101
 msgid "First Page"
 msgstr "صفحهٔ اول"
 
-#: page/views.py:41 templates/base.html:22 templates/base.html.py:52
+#: page/views.py:41 templates/base.html:22 templates/base.html.py:62
 msgid "TehPUG"
 msgstr "پاگ تهران"
 
@@ -329,7 +330,7 @@ msgstr "پروژه‌ پاگ تهران"
 msgid "Project"
 msgstr "پروژه"
 
-#: projects/models.py:121 templates/base.html:56
+#: projects/models.py:121 templates/base.html:66
 msgid "Projects"
 msgstr "پروژه‌ها"
 
@@ -377,11 +378,20 @@ msgstr "بارگیری"
 msgid "Repositories"
 msgstr "مخازن"
 
-#: tehpug/settings.py:87 templates/base.html:69
+#: tehpug/base_model.py:8
+#, fuzzy
+msgid "Created"
+msgstr "خالق هنر"
+
+#: tehpug/base_model.py:10
+msgid "Modified"
+msgstr "تغییر یافته"
+
+#: tehpug/settings.py:86 templates/base.html:80
 msgid "Persian"
 msgstr "فارسی"
 
-#: tehpug/settings.py:88 templates/base.html:67
+#: tehpug/settings.py:87 templates/base.html:78
 msgid "English"
 msgstr "انگلیسی"
 
@@ -405,124 +415,128 @@ msgstr "گروه کاربران پایتون تهران"
 msgid "A group of python users in Tehran"
 msgstr "گروهی از برنامه‌نویسان پایتون در تهران"
 
-#: templates/base.html:57
+#: templates/base.html:67
 msgid "Contact"
 msgstr "ارتباط با ما"
 
-#: templates/base.html:59
+#: templates/base.html:69
 msgid "WebChat"
 msgstr "چت آنلاین"
 
-#: templates/base.html:60
+#: templates/base.html:70
 msgid "Mailing list"
 msgstr "میلینگ لیست"
 
-#: templates/base.html:93
+#: templates/base.html:71
+msgid "PyLearn forum"
+msgstr "انجمن PyLearn"
+
+#: templates/base.html:104
 msgid "Other Communities"
 msgstr "گروه‌های دیگر"
 
-#: templates/base.html:95
+#: templates/base.html:106
 msgid "Tehran Lug"
 msgstr "تهران‌لاگ"
 
-#: templates/base.html:96
+#: templates/base.html:107
 msgid "Karaj Lug"
 msgstr "کرج لاگ"
 
-#: templates/base.html:97
+#: templates/base.html:108
 msgid "Isfahan Lug"
 msgstr "اصفهان‌لاگ"
 
-#: templates/base.html:98
+#: templates/base.html:109
 msgid "Zanjan Lug"
 msgstr "زنجان‌لاگ"
 
-#: templates/base.html:99
+#: templates/base.html:110
 msgid "Mashhad Lug"
 msgstr "مشهدلاگ"
 
-#: templates/base.html:100
+#: templates/base.html:111
 msgid "Guilan Lug"
 msgstr "گیلان‌لاگ"
 
-#: templates/base.html:101
+#: templates/base.html:112
 msgid "Khuzestan Lug"
 msgstr "خوزستان‌لاگ"
 
-#: templates/base.html:102
+#: templates/base.html:113
 msgid "Tabriz Lug"
 msgstr "تبریز‌لاگ "
 
-#: templates/base.html:103
+#: templates/base.html:114
 msgid "Kerman Lug"
 msgstr "کرمان‌لاگ"
 
-#: templates/base.html:104
+#: templates/base.html:115
 msgid "Yazd Lug"
 msgstr "یزد‌لاگ"
 
-#: templates/base.html:105
+#: templates/base.html:116
 msgid "Bushehr Lug"
 msgstr "بوشهر‌لاگ"
 
-#: templates/base.html:111
+#: templates/base.html:122
 msgid "Useful links"
 msgstr "پیوندهای مفید"
 
-#: templates/base.html:113
+#: templates/base.html:124
 #, fuzzy
 msgid "TehPUG on Wikipedia"
 msgstr "پاگ تهران در ویکیپدیا"
 
-#: templates/base.html:114
+#: templates/base.html:125
 msgid "Python The Right Way"
 msgstr "Python The Right Way"
 
-#: templates/base.html:115
+#: templates/base.html:126
 msgid "PySocial"
 msgstr "اجتماع پایتونی‌ها"
 
-#: templates/base.html:116
+#: templates/base.html:127
 msgid "Salam Donya Mag"
 msgstr "مجله سلام دنیا"
 
-#: templates/base.html:122
+#: templates/base.html:133
 msgid "TehPUG in"
 msgstr "پاگ تهران در"
 
-#: templates/base.html:123
+#: templates/base.html:134
 msgid "TehPUG at Github"
 msgstr "پاگ تهران در گیت‌هاب"
 
-#: templates/base.html:124
+#: templates/base.html:135
 msgid "TehPUG at Twitter"
 msgstr "پاگ تهران در تویتر"
 
-#: templates/base.html:125
+#: templates/base.html:136
 msgid "TehPUG at YouTube"
 msgstr "پاگ تهران در یوتیوب"
 
-#: templates/base.html:126
+#: templates/base.html:137
 msgid "TehPUG at Trello"
 msgstr "پاگ تهران در ترلو"
 
-#: templates/base.html:127
+#: templates/base.html:138
 msgid "TehPUG Mailing List"
 msgstr "لیست پستی پاگ تهران"
 
-#: templates/base.html:128
+#: templates/base.html:139
 msgid "TehPUG at Facebook"
 msgstr "پاگ تهران در فیسبوک"
 
-#: templates/base.html:129
+#: templates/base.html:140
 msgid "TehPUG RSS Feed"
 msgstr "فید‌های RSS پاگ تهران"
 
-#: templates/base.html:131
+#: templates/base.html:142
 msgid "Sponsors"
 msgstr "حامیان"
 
-#: templates/base.html:138
+#: templates/base.html:149
 msgid "Copyright 2013-2014 TehPUG Community"
 msgstr "کپی‌رایت ۲۰۱۳−۲۰۱۴ اجتماع پاگ تهران"
 
