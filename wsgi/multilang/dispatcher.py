@@ -50,37 +50,26 @@ def dispatch_url(request, lang=None):
     """
     Dispatch the urls again against the LEAF_URLCONF.
     """
-    _lang = lang
     need_cookie = True
-    if _lang:
+    if lang and (request.path.startswith("/%s/" % lang) or
+                 request.path == "/%s" % lang):
+        path = request.path[len(lang) + 1:]
+        request.path = path
+        request.path_info = path
+        request.META["PATH_INFO"] = path
+        if "lang" in request.GET:
+            # request.session['django_language'] = request.GET["lang"]
+            need_cookie = True
 
-        if request.path.startswith("/%s/" % _lang) or \
-                request.path == "/%s" % _lang:
-            path = request.path[len(_lang) + 1:]
-            request.path = path
-            request.path_info = path
-            request.META["PATH_INFO"] = path
-            if "lang" in request.GET:
-                request.session['django_language'] = request.GET["lang"]
-                need_cookie = True
-
+    elif settings.LANGUAGE_COOKIE_NAME in request.COOKIES:
+        lang = request.COOKIES[settings.LANGUAGE_COOKIE_NAME]
+        # request.session['django_language'] = lang
+        need_cookie = False
     else:
-
-        if settings.LANGUAGE_COOKIE_NAME in request.COOKIES:
-            _lang = request.COOKIES[settings.LANGUAGE_COOKIE_NAME]
-            request.session['django_language'] = _lang
-            need_cookie = False
-
-        else:
-            if "django_language" in request.session:
-                _lang = request.session["django_language"]
-
-            else:
-                _lang = settings.LANGUAGES[0][0]
+        lang = settings.LANGUAGES[0][0]
 
     try:
         view = resolve(request.path, settings.LEAF_URLCONF)
-
     except Http404:
         try:
             if not request.path.endswith("/"):
@@ -89,16 +78,14 @@ def dispatch_url(request, lang=None):
             else:
                 raise
         except Http404:
-
             raise
 
-    request.session['django_language'] = _lang
-    activate(_lang)
-    setattr(settings, "LANGUAGE_CODE", _lang)
+    activate(lang)
+    setattr(settings, "LANGUAGE_CODE", lang)
 
     response = view.func(request, *view.args, **view.kwargs)
 
     if need_cookie:
-        set_cookie(response, settings.LANGUAGE_COOKIE_NAME, _lang)
+        set_cookie(response, settings.LANGUAGE_COOKIE_NAME, lang)
 
     return response
