@@ -55,10 +55,14 @@ else:
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': os.path.join(PROJECT_DIR, 'sqlite3.db'),
-            'USER': '',
+        },
+        'postgres': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'tehpug',
+            'USER': 'postgres',
             'PASSWORD': '',
-            'HOST': '',
-            'PORT': '',
+            'HOST': 'localhost',
+            'PORT': 5432,
         }
     }
 
@@ -133,15 +137,16 @@ STATICFILES_FINDERS = (
 
 # Make this unique, and don't share it with anybody.
 default_keys = {
-    'SECRET_KEY': 'as#jgh[cn]@%^sKHJkh9&*(&987(^%^&65$GJB<Pasdoa[sodqlwllkasd]))'
+    'SECRET_KEY': 'as#jgh[cn]@%^sKHJkh9&*(&987(^%^&65$GJB<Psodqlwllkasd]))'
 }
 
 # Replace default keys with dynamic values if we are in OpenShift
-use_keys = default_keys
 if ON_OPENSHIFT:
     # imp.find_module('openshiftlibs')
     import openshiftlibs
     use_keys = openshiftlibs.openshift_secure(default_keys)
+else:
+    use_keys = default_keys
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = use_keys['SECRET_KEY']
@@ -264,3 +269,5 @@ ALLOWED_HOSTS = (
     "127.0.0.1",
     'django-dbbackup'
 )
+
+DBBACKUP_POSTGRESQL_BACKUP_COMMANDS = [['pg_dump', '-O', '--username={adminuser}', '--host={host}', '--port={port}', '{databasename}', '>']]
