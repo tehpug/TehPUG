@@ -196,8 +196,9 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.admin',
     'django.contrib.sitemaps',
+    'modeltranslation',                   # If you want to use the admin integration, modeltranslation must be put before django.contrib.admin.
+    'django.contrib.admin',
     'django_markdown',
     'south',
     'dbbackup',
@@ -267,3 +268,5 @@ ALLOWED_HOSTS = (
 )
 
 DBBACKUP_POSTGRESQL_BACKUP_COMMANDS = [['pg_dump', '-O', '--username={adminuser}', '--host={host}', '--port={port}', '{databasename}', '>']]
+
+MODELTRANSLATION_FALLBACK_LANGUAGES = ('fa', 'en')

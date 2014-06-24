@@ -7,6 +7,7 @@ django-crispy-forms==1.4.0
 django-dbbackup==1.80.2
 django-debug-toolbar==1.2
 django-markdown==0.5.4
+django-modeltranslation==0.8b1
 django-reversion==1.8.0
 dropbox==1.6
 psycopg2==2.5.2

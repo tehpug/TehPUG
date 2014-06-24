@@ -34,6 +34,7 @@ urlpatterns = patterns(
     (r'^faq/$', "faq.views.index"),
     (r'^news/', include('news.urls')),
     (r'^page/', include('page.urls')),
+    (r'^projects/', include('projects.urls')),
     (r'^contact/$', 'tehpug.views.contact'),
     (r'^$', 'tehpug.views.index'),
     (r'^facebook/$', 'tehpug.views.facebook'),

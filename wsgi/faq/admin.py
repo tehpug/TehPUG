@@ -18,12 +18,14 @@
 # -----------------------------------------------------------------------------
 
 from django.contrib import admin
+
 from django_markdown.admin import MarkdownModelAdmin
+from modeltranslation.admin import TranslationAdmin
 
 from faq.models import FAQ
 
 
-class FAQAdmin(MarkdownModelAdmin):
+class FAQAdmin(MarkdownModelAdmin, TranslationAdmin):
     """
     Admin interface class for FAQ model
     """

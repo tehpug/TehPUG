@@ -22,7 +22,7 @@ from django.template import RequestContext
 from django.http import Http404
 from django.utils.translation import get_language
 
-from .models import Project, Repository
+from projects.models import Project, Repository
 
 
 def projects_index(request):

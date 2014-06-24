@@ -18,12 +18,14 @@
 # -----------------------------------------------------------------------------
 
 from django.contrib import admin
+
 from django_markdown.admin import MarkdownModelAdmin
+from modeltranslation.admin import TranslationAdmin
 
 from page.models import Page, FirstPage
 
 
-class PageAdmin(MarkdownModelAdmin):
+class PageAdmin(MarkdownModelAdmin, TranslationAdmin):
     """
     Admin interface class for paeg model
     """
@@ -37,7 +39,7 @@ class PageAdmin(MarkdownModelAdmin):
         obj.save()
 
 
-class FPageAdmin(MarkdownModelAdmin):
+class FPageAdmin(MarkdownModelAdmin, TranslationAdmin):
     """
     Admin interface class for paeg model
     """
