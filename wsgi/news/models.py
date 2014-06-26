@@ -18,7 +18,7 @@
 #    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 # -----------------------------------------------------------------------------
 from django.db import models
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import User
 from django.conf import settings
 
@@ -29,6 +29,7 @@ class News(models.Model):
     """
     user = models.ForeignKey(User, editable=False,
                              verbose_name=_("User"))
+
     title = models.CharField(max_length=60,
                              verbose_name=_("Title"))
     content = models.TextField(verbose_name=_("News content"))
