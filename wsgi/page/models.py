@@ -22,8 +22,10 @@ from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
 from django.conf import settings
 
+from model_utils.models import TimeStampedModel
 
-class Page(models.Model):
+
+class Page(TimeStampedModel):
     """
     Page main model class
     """
@@ -73,7 +75,7 @@ class Page(models.Model):
         verbose_name = _('Page')
 
 
-class FirstPage(models.Model):
+class FirstPage(TimeStampedModel):
     user = models.ForeignKey(User, editable=False,
                              verbose_name=_("User"))
 

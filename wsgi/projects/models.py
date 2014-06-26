@@ -20,8 +20,10 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
+from model_utils.models import TimeStampedModel
 
-class Project(models.Model):
+
+class Project(TimeStampedModel):
     """
     Project main model
     """
@@ -121,7 +123,7 @@ class Project(models.Model):
         verbose_name_plural = _("Projects")
 
 
-class Repository(models.Model):
+class Repository(TimeStampedModel):
     """
     Repository model.
     """
