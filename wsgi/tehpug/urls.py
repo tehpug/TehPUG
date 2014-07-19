@@ -33,7 +33,7 @@ urlpatterns = patterns(
     (r'^admin/', include(admin.site.urls)),
     (r'^faq/$', "faq.views.index"),
     (r'^news/', include('news.urls')),
-    (r'^page/', include('page.urls')),
+    (r'(\S+)/$', 'page.views.show_page'),
     (r'^projects/', include('projects.urls')),
     (r'^contact/$', 'tehpug.views.contact'),
     (r'^$', 'tehpug.views.index'),
