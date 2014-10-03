@@ -51,41 +51,7 @@
 <div class="address">
   <div class="row">
     <div class="addrtext pull-{% if lang.bidi %}right{% else %}left{% endif %} span6">
-      <h2>
-        <i class="fa fa-map-marker fa-large"></i> {% trans "Address" %}
-      </h2>
-      <h3>
-        {% trans "Sessions" %}
-      </h3>
-      <p>
-        {% trans "Tehran, Africa St, Nor St (Africa to the north after the Zafar, before the gas station), No 18, Tosan Co. Training Hall" %}
-      </p>
-      <br />
-      <p>
-        {% trans "More Information" %}:
-      </p>
-      <p class="left pull-{% if lang.bidi %}left{% else %}right{% endif %}">
-        {% trans "Keyvan Hedayati" %} : {% trans "+98-936-8347120" %}<br/>
-      </p>
-    </div>
-    <div class="pull-{% if lang.bidi %}left{% else %}right{% endif %} span6">
-      <a href="http://goo.gl/V1Qoz0" target="_blank" title="{% trans "View" %} {% trans "Tosan Co." %} {% trans "in a larger map" %}">
-        <img src="{% static 'img/sessionmap.jpg' %}" class="img-rounded" alt="TehPUG on map" />
-      </a>
-      <br />
-      <p class="small">
-        {% trans "View" %}
-        <a href="http://goo.gl/V1Qoz0" target="_blank">
-          {% trans "Tosan Co." %}
-        </a>
-        {% trans "in a larger map" %}
-      </p>
-    </div>
-    <div class="clearfix"></div>
-  </div>
-  <div class="row">
-    <div class="addrtext pull-{% if lang.bidi %}right{% else %}left{% endif %} span6">
-      <h3>{% trans "Workshops" %}</h3>
+      <h3>{% trans "Sessions" %}</h3>
       <p>
         {% trans "Tehran, Saadat Abad, Southern Allameh st, Eastern 36th, No 22, Kava Co." %}
       </p>
@@ -94,6 +60,7 @@
         {% trans "More Information" %}:
       </p>
       <p class="left pull-{% if lang.bidi %}left{% else %}right{% endif %}">
+        {% trans "Keyvan Hedayati" %} : {% trans "+98-936-8347120" %}<br/>
         {% trans "Nima Norozi" %} : <a href="mailto:nim4n@yahoo.com" target="_blank">nim4n@yahoo.com</a><br/>
       </p>
     </div>
