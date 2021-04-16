@@ -5,7 +5,7 @@ South==0.8.4
 boto==2.29.1
 django-crispy-forms==1.4.0
 django-dbbackup==1.80.2
-django-debug-toolbar==1.2
+django-debug-toolbar==1.11.1
 django-markdown==0.5.4
 django-model-utils==2.0.3
 django-modeltranslation==0.8b1
