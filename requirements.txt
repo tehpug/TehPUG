@@ -13,5 +13,5 @@ django-reversion==1.8.0
 dropbox==1.6
 psycopg2==2.5.2
 sqlparse==0.1.11
-urllib3==1.8.2
+urllib3==1.26.5
 wsgiref==0.1.2
